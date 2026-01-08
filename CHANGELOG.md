@@ -2,7 +2,7 @@
 
 **AlphaBits** is an automated, AI-generated broadcast featuring two pixel-art entities discussing real-time market trends, Pump.fun launches, and Solana ecosystem volatility.
 
-> **Current Version:** v1.4 (Stable Animation)
+> **Current Version:** v2.6 (Undertale UI Update)
 > **Status:** Active Development
 
 ## 📺 Concept
@@ -12,13 +12,13 @@ Two characters exist in a perpetual loop inside the "Alpha Terminal", analyzing 
 - **KING (The Cat)**: A chaotic maximalist. Believes in "Only Up", screams "WAGMI", and buys every dip.
 - **DUCK (The Bot)**: A skeptical analyst. Paranoid about rugs, checks contract addresses, always nervous.
 
-## ✨ Key Features (v1.4)
+## ✨ Key Features (v2.6)
 
-- **🧠 Generative Scripting**: Powered by OpenAI (GPT-4o), ensuring unique dialogues every time.
+- **💬 RPG Dialogue Engine**: "Undertale-style" text boxes with typewriter animation, Courier font, and classic styling (*Black box, White border*).
+- **🧠 Generative Scripting**: Powered by OpenAI (GPT-4o), ensuring unique dialogues every time without emojis (clean text only).
 - **🗣️ Dynamic Lip-Sync**: Characters automatically open/close mouths in perfect sync with audio duration.
-- **👀 "Alive" Idle State**: Characters blink randomly and breathe/bounce when not speaking.
+- **🛡️ Anti-Jitter System**: Custom "Smart Centering" logic that prevents sprites from shaking during animation loops.
 - **🔊 8-Bit Audio Engine**: Custom "Animal Crossing" style voice synthesis.
-- **🚫 Zero-Flicker Rendering**: Advanced frame buffering prevents character flickering during scene transitions.
 
 ## 📜 Version History
 
@@ -26,10 +26,12 @@ We are moving fast. Here is our progress log:
 
 | Version | Update Name | Key Changes |
 | :--- | :--- | :--- |
-| **v1.4** | **Perfect Polish** | Fixed character positioning (Y-axis), adjusted spacing, optimized blinking frequency. |
-| **v1.3** | **Anti-Flicker** | Added frame buffering to fix "disappearing characters" bug at end of sentences. |
-| **v1.2** | **Transparency Fix** | Migrated engine to full RGBA support (removed black borders around assets). |
-| **v1.1** | **Animation Engine** | Introduced Lip-Sync logic and basic blinking events. |
+| **v2.6** | **Undertale UI** | Replaced generic bubbles with RPG-style black/white text boxes. Added `*` prefix and Courier font. |
+| **v2.5** | **Robustness** | Added "Emoji Filter", fixed bubble layering, and added end-buffer to prevent video flickering. |
+| **v2.4** | **Compatibility** | Implemented "Fail-Safe" text sizing for older Pillow libraries. |
+| **v2.1** | **Typewriter FX** | Added character-by-character text generation animation. |
+| **v1.8** | **Anti-Jitter** | Fixed sprite displacement during blinking events (Auto-centering logic). |
+| **v1.5** | **Pixel Perfect** | Aligned characters to exact Photoshop coordinates (Y-axis fix). |
 | **v1.0** | **Genesis** | Initial release. Static images + Audio generation logic. |
 
 ## 🗺 Roadmap (Q1 2026)
@@ -38,6 +40,7 @@ We are moving fast. Here is our progress log:
     - [x] Character design & Transparent Assets.
     - [x] Audio synthesis logic.
     - [x] Animation System (Blink/Talk/Bounce).
+    - [x] **Visual UI (RPG Text Boxes).**
 
 - [ ] **Phase 2: Visual Interaction (In Progress)**
     - [ ] Add "Rug Pull" explosion animation.
@@ -51,8 +54,8 @@ We are moving fast. Here is our progress log:
 ## 🛠 Tech Stack
 
 - **Core**: Python 3.10
-- **Visuals**: MoviePy + PIL (RGBA)
-- **Logic**: OpenAI API
+- **Visuals**: MoviePy + PIL (Pillow 9/10 Compatible)
+- **Logic**: OpenAI API (GPT-4o)
 - **Audio**: Custom Soundfont Engine
 
 ---
