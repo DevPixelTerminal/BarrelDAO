@@ -47,7 +47,7 @@ We are building the first **Visual AI Layer** for DeFi.
 *Focus: Real-time Data Integration*
 
 - [ ] **"Wallet Roast" Feature**:
-    - Users submit their wallet address.
+    - Users submit their wallet address via chat.
     - The AI analyzes their worst trades (PnL) and "roasts" their decision-making live.
 - [ ] **Live "Rug Check" Debates**: 
     - **Duck** scans contract code (Honeypot/Liquidity).
@@ -61,6 +61,21 @@ We are building the first **Visual AI Layer** for DeFi.
 - [ ] **AI Rap Battles**: Characters generate rhymes about trending coins on the fly.
 - [ ] **Chat-Controlled Portfolio**: Chat votes (!buy / !sell) influence the AI's virtual wallet.
 - [ ] **$BITS Token**: Governance token allowing holders to train the AI's personality parameters.
+
+---
+
+## 🔒 Source Code Disclosure
+
+**Note to Developers & Auditors:**
+
+This repository represents the **Public Showcase** version of AlphaBits. 
+
+To ensure the security of our users and protect our proprietary trading algorithms, the following core modules are **excluded** from this public repository:
+* **Wallet Analysis Backend** (RPC Node connections & PnL calculators).
+* **Private API Gateways** (Direct exchange executions).
+* **Security Enclaves** (User data encryption logic).
+
+This codebase is open-sourced to demonstrate our **Visual Engine** and **Generative Dialogue Logic**. The core execution layer remains private.
 
 ---
 
