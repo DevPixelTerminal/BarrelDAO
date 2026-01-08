@@ -2,7 +2,7 @@
 
 **AlphaBits** is an autonomous, high-frequency AI broadcast engineered to decode the chaos of the Solana ecosystem. It combines **LLM-driven market analysis** with retro-gaming aesthetics to create the ultimate "Good Cop / Bad Cop" experience for crypto traders.
 
-> **Current Version:** v3.0 (Undertale UI & Safe-Text Engine)
+> **Current Version:** v3.3 (Stable UI & Bi-Directional Anchors)
 > **Status:** 🚀 Hyper-Speed Development
 
 ## 🧠 The Concept: "Sentiment vs. Security"
@@ -12,27 +12,36 @@ Two AI agents exist in a perpetual feedback loop, analyzing live market data and
 - **👑 KING (The Degen)**: Represents **Greed & FOMO**. Uses sentiment analysis to detect viral potential. Screams "WAGMI", buys every dip, and ignores red flags.
 - **🤖 DUCK (The Auditor)**: Represents **Fear & Logic**. Analyzes on-chain data for risk. Paranoid about rugs, checks liquidity locks, and begs you to take profits.
 
-Together, they provide a balanced (and chaotic) view of every new token launch on Pump.fun.
+## ✨ Key Features (v3.3)
 
-## ✨ Technical Architecture (v3.0)
+### 🎨 Cinematic UI Engine
+- **RPG Dialogue System**: Custom "Undertale-style" text rendering with colored bounding boxes specific to each character.
+- **Bi-Directional Anchoring**: Advanced vector logic ensures speech bubble "tails" always point correctly to the speaker's head, regardless of text length.
+- **Auto-Expanding Layout**: Dynamic padding calculation prevents text overflow, scaling seamlessly from 1 word to full paragraphs.
 
-AlphaBits is built on a custom Python engine that orchestrates multiple AI layers:
+### ⚙️ Core Architecture
+- **Typewriter FX**: Character-by-character text generation synced with audio timing.
+- **Anti-Jitter Sprites**: Smart centering algorithms prevent asset displacement during "Blink" or "Talk" animations.
+- **Audio Synthesis**: Custom 8-bit voice modulation (Deep/Fast for King, High/Slow for Bot).
 
-### 🎨 Visuals & UI
-* **RPG Dialogue Engine**: Custom "Undertale-style" text rendering with dynamic bounding box calculation and typewriter effects.
-* **Pixel-Perfect Compositing**: Procedural animation system aligned to exact screen coordinates using RGBA layering.
-* **Reactive Sprites**: Anti-jitter logic ensures smooth state transitions (Idle → Talk → Blink).
+## 📜 Version History
 
-### ⚙️ Core Logic
-* **Generative Narrative**: Powered by **GPT-4o** with strict "No-Emoji" prompt engineering for clean, retro-terminal text output.
-* **Dynamic Audio Synthesis**: Custom "8-bit Voice Engine" that modulates pitch and speed based on character personality (Deep/Fast for King, High/Slow for Duck).
-* **Lip-Sync Algo**: Frame-accurate mouth movement synchronization with generated audio duration.
+We ship daily. Here is our changelog:
 
----
+| Version | Update Name | Key Innovations |
+| :--- | :--- | :--- |
+| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic. Cat's tail now correctly locks to the right, Bot's to the left. Zero "floating" artifacts. |
+| **v3.0** | **Safe-Text** | Added "Safety Padding" and font resizing logic to prevent text overflow in long sentences. |
+| **v2.8** | **Speech Tails** | Added procedural triangle rendering to speech bubbles for comic-book style directionality. |
+| **v2.7** | **Color Identity** | UI overhaul: King gets Navy/Gold theme, Bot gets Brown/Yellow theme. |
+| **v2.6** | **Undertale Style** | Switched to high-contrast RPG aesthetics (Courier font, Black boxes, White borders). |
+| **v2.1** | **Typewriter** | Introduced dynamic text rendering time-synced with `wav` file duration. |
+| **v1.5** | **Pixel Perfect** | Aligned characters to exact Photoshop coordinates (Y-axis anchor fix). |
+| **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
 
-## 🗺️ Roadmap: The Path to Singularity
+## 🗺️ Roadmap: The Intelligence Layer
 
-We are building fast. No long wait times. Just shipping.
+We are building the first **Visual AI Layer** for DeFi.
 
 ### ✅ Phase 1: Genesis (Completed)
 - [x] Core Python Animation Engine deployment.
@@ -40,46 +49,56 @@ We are building fast. No long wait times. Just shipping.
 - [x] **v2.0 UI Overhaul**: Undertale-style text boxes & color coding.
 - [x] Audio synthesis & Lip-sync logic.
 
-### 🚧 Phase 2: The Intelligence Layer (Active Sprint)
-*Focus: Real-time Data & Utility*
+### 🚧 Phase 2: Utility & Analysis (Active Sprint)
+*Focus: Real-time Data Integration*
 
-- [ ] **Live "Rug Check" Debates**: 
-    - Users paste a Contract Address (CA) in chat.
-    - **Duck** scans code (Honeypot/Liquidity check).
-    - **King** scans social sentiment (Twitter/Telegram hype).
-    - They debate live: "Alpha or Scam?".
 - [ ] **"Wallet Roast" Feature**:
-    - Users submit their wallet address.
-    - The AI analyzes their worst trades and "roasts" their PnL live on stream.
-- [ ] **Market Reactivity**: Background environment shifts colors (Red/Green) based on real-time Solana price action.
+    - Users submit their wallet address via chat.
+    - The AI analyzes their worst trades (PnL) and "roasts" their decision-making live.
+- [ ] **Live "Rug Check" Debates**: 
+    - **Duck** scans contract code (Honeypot/Liquidity).
+    - **King** scans social sentiment (Twitter/Telegram).
+    - They debate live: "Alpha or Scam?".
+- [ ] **Reactive Environment**: Background lighting shifts Red/Green based on real-time Solana price action.
 
-### 🚀 Phase 3: Gamification & Economy (Next Up)
+### 🚀 Phase 3: Gamification (Next Up)
 *Focus: Community Interaction*
 
 - [ ] **AI Rap Battles**: Characters generate rhymes about trending coins on the fly.
-- [ ] **Interactive Events**: 
-    - Chat votes (!buy / !sell) influence the AI's "virtual portfolio".
-    - Donations trigger visual chaos (Explosions, Confetti, Laser Eyes).
-- [ ] **$BITS Token Launch**: Governance token allowing holders to train the AI's personality.
+- [ ] **Chat-Controlled Portfolio**: Chat votes (!buy / !sell) influence the AI's virtual wallet.
+- [ ] **$BITS Token**: Governance token allowing holders to train the AI's personality parameters.
+
+---
+
+## 🔒 Source Code Disclosure
+
+**Note to Developers & Auditors:**
+
+This repository represents the **Public Showcase** version of AlphaBits. 
+
+To ensure the security of our users and protect our proprietary trading algorithms, the following core modules are **excluded** from this public repository:
+* **Wallet Analysis Backend** (RPC Node connections & PnL calculators).
+* **Private API Gateways** (Direct exchange executions).
+* **Security Enclaves** (User data encryption logic).
+
+This codebase is open-sourced to demonstrate our **Visual Engine** and **Generative Dialogue Logic**. The core execution layer remains private.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Component | Technology |
-| :--- | :--- |
-| **Logic** | Python 3.10, OpenAI API (GPT-4o) |
-| **Render** | MoviePy, Pillow (PIL), NumPy |
-| **Audio** | Custom Soundfont Synthesis (WAV manipulation) |
-| **Deployment** | GitHub Actions, OBS Studio |
+- **Logic**: Python 3.10, OpenAI API (GPT-4o)
+- **Render**: MoviePy, Pillow (PIL), NumPy
+- **Audio**: Custom Soundfont Synthesis
+- **Deploy**: GitHub Actions, OBS Studio
 
 ---
 
 ### 🤝 Contributing
 
-We welcome degens and developers. We ship daily.
+We welcome degens and developers.
 1. Fork the repo.
-2. Create your feature branch (`git checkout -b feature/NewAsset`).
+2. Create your feature branch (`git checkout -b feature/NewFeature`).
 3. Commit your changes.
 4. Open a Pull Request.
 
