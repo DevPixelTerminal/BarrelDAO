@@ -1,15 +1,15 @@
 # 👾 AlphaBits: The AI Sentiment Terminal
 
-**AlphaBits** is an autonomous, real-time AI broadcast engineered to decode the chaos of the Solana ecosystem. It combines **LLM-driven market analysis** with retro-gaming aesthetics to create the ultimate "Good Cop / Bad Cop" experience for crypto traders.
+**AlphaBits** is an autonomous, high-frequency AI broadcast engineered to decode the chaos of the Solana ecosystem. It combines **LLM-driven market analysis** with retro-gaming aesthetics to create the ultimate "Good Cop / Bad Cop" experience for crypto traders.
 
-> **Current Version:** v3.0 (Safe-Text & UI Update)
-> **Status:** 🟢 Live Development
+> **Current Version:** v3.0 (Undertale UI & Safe-Text Engine)
+> **Status:** 🚀 Hyper-Speed Development
 
 ## 🧠 The Concept: "Sentiment vs. Security"
 
 Two AI agents exist in a perpetual feedback loop, analyzing live market data and user interactions:
 
-- **👑 KING (The Degen)**: Represents **Greed & FOMO**. Uses sentiment analysis to detect viral potential. Screams "WAGMI", buys the top, and ignores red flags.
+- **👑 KING (The Degen)**: Represents **Greed & FOMO**. Uses sentiment analysis to detect viral potential. Screams "WAGMI", buys every dip, and ignores red flags.
 - **🤖 DUCK (The Auditor)**: Represents **Fear & Logic**. Analyzes on-chain data for risk. Paranoid about rugs, checks liquidity locks, and begs you to take profits.
 
 Together, they provide a balanced (and chaotic) view of every new token launch on Pump.fun.
@@ -32,7 +32,7 @@ AlphaBits is built on a custom Python engine that orchestrates multiple AI layer
 
 ## 🗺️ Roadmap: The Path to Singularity
 
-We are building more than a stream. We are building an interactive AI layer for DeFi.
+We are building fast. No long wait times. Just shipping.
 
 ### ✅ Phase 1: Genesis (Completed)
 - [x] Core Python Animation Engine deployment.
@@ -40,19 +40,21 @@ We are building more than a stream. We are building an interactive AI layer for 
 - [x] **v2.0 UI Overhaul**: Undertale-style text boxes & color coding.
 - [x] Audio synthesis & Lip-sync logic.
 
-### 🚧 Phase 2: The "Utility" Update (Current Focus)
-*Target: Q2 2026*
+### 🚧 Phase 2: The Intelligence Layer (Active Sprint)
+*Focus: Real-time Data & Utility*
 
-- [ ] **Live "Rug Check" Integration**: 
+- [ ] **Live "Rug Check" Debates**: 
     - Users paste a Contract Address (CA) in chat.
-    - **Duck** scans code (Honeypot/Liquidity).
-    - **King** scans social sentiment (Twitter/Telegram).
-    - They debate live: "Moon or Doom?".
-- [ ] **Market Reactivity**: Background turns *Red* or *Green* based on real-time Solana price action.
-- [ ] **Twitch/Kick Integration**: Fully automated 24/7 looping stream via OBS WebSocket.
+    - **Duck** scans code (Honeypot/Liquidity check).
+    - **King** scans social sentiment (Twitter/Telegram hype).
+    - They debate live: "Alpha or Scam?".
+- [ ] **"Wallet Roast" Feature**:
+    - Users submit their wallet address.
+    - The AI analyzes their worst trades and "roasts" their PnL live on stream.
+- [ ] **Market Reactivity**: Background environment shifts colors (Red/Green) based on real-time Solana price action.
 
-### 🚀 Phase 3: Gamification & Economy
-*Target: Q3 2026*
+### 🚀 Phase 3: Gamification & Economy (Next Up)
+*Focus: Community Interaction*
 
 - [ ] **AI Rap Battles**: Characters generate rhymes about trending coins on the fly.
 - [ ] **Interactive Events**: 
@@ -75,7 +77,7 @@ We are building more than a stream. We are building an interactive AI layer for 
 
 ### 🤝 Contributing
 
-We welcome degens and developers. If you want to improve the *Rug Check* algorithm or add new assets:
+We welcome degens and developers. We ship daily.
 1. Fork the repo.
 2. Create your feature branch (`git checkout -b feature/NewAsset`).
 3. Commit your changes.
