@@ -1,48 +1,84 @@
-# 👾 AlphaBits: AI Crypto Stream
+# 👾 AlphaBits: The AI Sentiment Terminal
 
-**AlphaBits** is an automated, AI-generated broadcast featuring two pixel-art entities discussing real-time market trends, Pump.fun launches, and Solana ecosystem volatility.
+**AlphaBits** is an autonomous, real-time AI broadcast engineered to decode the chaos of the Solana ecosystem. It combines **LLM-driven market analysis** with retro-gaming aesthetics to create the ultimate "Good Cop / Bad Cop" experience for crypto traders.
 
-## 📺 Concept
+> **Current Version:** v3.0 (Safe-Text & UI Update)
+> **Status:** 🟢 Live Development
 
-Two characters exist in a perpetual loop inside the "Alpha Terminal", analyzing the chaos of the crypto market:
+## 🧠 The Concept: "Sentiment vs. Security"
 
-- **KING (The Cat)**: A chaotic maximalist. Believes in "Only Up", screams "WAGMI", and buys every dip. Represents pure Greed.
-- **DUCK (The Bot)**: A skeptical analyst. Paranoid about rugs, checks contract addresses, always nervous. Represents Fear.
+Two AI agents exist in a perpetual feedback loop, analyzing live market data and user interactions:
 
-## 🚀 Features
+- **👑 KING (The Degen)**: Represents **Greed & FOMO**. Uses sentiment analysis to detect viral potential. Screams "WAGMI", buys the top, and ignores red flags.
+- **🤖 DUCK (The Auditor)**: Represents **Fear & Logic**. Analyzes on-chain data for risk. Paranoid about rugs, checks liquidity locks, and begs you to take profits.
 
-- **Generative Scripting**: Powered by OpenAI (GPT-4o), ensuring no two conversations are ever the same.
-- **Dynamic Audio Engine**: "Animal Crossing" style speech synthesis using randomized pitch-shifting of custom WAV samples.
-- **Visual Reactivity**: Characters procedurally animate/bounce based on speech timing.
-- **Pump.fun Integration**: (Planned) Real-time chat interaction and ticker tracking.
+Together, they provide a balanced (and chaotic) view of every new token launch on Pump.fun.
 
-## 🗺 Roadmap (2026)
+## ✨ Technical Architecture (v3.0)
 
-We are actively building the ultimate AI stream. Here is our plan:
+AlphaBits is built on a custom Python engine that orchestrates multiple AI layers:
 
-- [x] **Phase 1: Launch (Completed)**
-    - [x] Core Python Engine setup.
-    - [x] Character design (King & Duck).
-    - [x] Audio synthesis logic (8-bit Emotion Engine).
-    - [x] GitHub Repository launch.
+### 🎨 Visuals & UI
+* **RPG Dialogue Engine**: Custom "Undertale-style" text rendering with dynamic bounding box calculation and typewriter effects.
+* **Pixel-Perfect Compositing**: Procedural animation system aligned to exact screen coordinates using RGBA layering.
+* **Reactive Sprites**: Anti-jitter logic ensures smooth state transitions (Idle → Talk → Blink).
 
-- [ ] **Phase 2: Integration (In Progress)**
-    - [ ] Connect Real-time Solana Price API.
-    - [ ] Add "Rug Pull" explosion animation.
-    - [ ] Twitch/YouTube live stream setup via OBS.
-
-- [ ] **Phase 3: Community**
-    - [ ] Token launch on Pump.fun ($BITS).
-    - [ ] Interactive chat commands (!pump, !dump).
-    - [ ] Viewer-triggered events.
-
-## 🛠 Tech Stack
-
-- **Core**: Python 3.10
-- **Visuals**: MoviePy + PIL
-- **Logic**: OpenAI API
-- **Audio**: Custom 8-bit Soundfont Engine
+### ⚙️ Core Logic
+* **Generative Narrative**: Powered by **GPT-4o** with strict "No-Emoji" prompt engineering for clean, retro-terminal text output.
+* **Dynamic Audio Synthesis**: Custom "8-bit Voice Engine" that modulates pitch and speed based on character personality (Deep/Fast for King, High/Slow for Duck).
+* **Lip-Sync Algo**: Frame-accurate mouth movement synchronization with generated audio duration.
 
 ---
 
-*Built for the Pump.fun community.*
+## 🗺️ Roadmap: The Path to Singularity
+
+We are building more than a stream. We are building an interactive AI layer for DeFi.
+
+### ✅ Phase 1: Genesis (Completed)
+- [x] Core Python Animation Engine deployment.
+- [x] Character asset design & transparent layering.
+- [x] **v2.0 UI Overhaul**: Undertale-style text boxes & color coding.
+- [x] Audio synthesis & Lip-sync logic.
+
+### 🚧 Phase 2: The "Utility" Update (Current Focus)
+*Target: Q2 2026*
+
+- [ ] **Live "Rug Check" Integration**: 
+    - Users paste a Contract Address (CA) in chat.
+    - **Duck** scans code (Honeypot/Liquidity).
+    - **King** scans social sentiment (Twitter/Telegram).
+    - They debate live: "Moon or Doom?".
+- [ ] **Market Reactivity**: Background turns *Red* or *Green* based on real-time Solana price action.
+- [ ] **Twitch/Kick Integration**: Fully automated 24/7 looping stream via OBS WebSocket.
+
+### 🚀 Phase 3: Gamification & Economy
+*Target: Q3 2026*
+
+- [ ] **AI Rap Battles**: Characters generate rhymes about trending coins on the fly.
+- [ ] **Interactive Events**: 
+    - Chat votes (!buy / !sell) influence the AI's "virtual portfolio".
+    - Donations trigger visual chaos (Explosions, Confetti, Laser Eyes).
+- [ ] **$BITS Token Launch**: Governance token allowing holders to train the AI's personality.
+
+---
+
+## 🛠 Tech Stack
+
+| Component | Technology |
+| :--- | :--- |
+| **Logic** | Python 3.10, OpenAI API (GPT-4o) |
+| **Render** | MoviePy, Pillow (PIL), NumPy |
+| **Audio** | Custom Soundfont Synthesis (WAV manipulation) |
+| **Deployment** | GitHub Actions, OBS Studio |
+
+---
+
+### 🤝 Contributing
+
+We welcome degens and developers. If you want to improve the *Rug Check* algorithm or add new assets:
+1. Fork the repo.
+2. Create your feature branch (`git checkout -b feature/NewAsset`).
+3. Commit your changes.
+4. Open a Pull Request.
+
+*Built by degens, for degens.* 🚀
