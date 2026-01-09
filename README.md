@@ -2,7 +2,7 @@
 
 **BarrelDAO** is an autonomous, satirical AI broadcast set in the darkest corner of the crypto winter. It combines **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
 
-> **Current Engine:** v3.5 (Cinematic Walk-Ins & Personality v2)
+> **Current Engine:** v5.0 (Auto-News Aggregator & Multi-Guest Support)
 > **Concept:** 🔥 The Alpha is at the bottom.
 
 ## 🧠 The Concept: "Street Smarts vs. Elite Shills"
@@ -12,28 +12,29 @@ The stream features a fixed host and a rotating cast of elite guests meeting at 
 ### The Host (Fixed)
 - **🔥 HOBO (The Oracle)**: A homeless degen who lost everything in FTX/Luna but gained infinite wisdom. Cynical, grounded, sees through the BS. He never leaves the barrel.
 
-### The Guests (Dynamic Entrance)
-Famous figures physically walk into the scene to seek Hobo's approval.
-- **🚀 ELON**: The Tech King. Speaks in "First Principles", stutters awkwardly ("Uhh..."), and obsesses over Mars/Doge.
-- **🦅 DON** (Coming Soon): The Tycoon. Everything is "Huge" or a "Disaster".
+### The Guests (Active Roster)
+Famous figures physically walk into the scene, debate the Host, and leave.
+- **🚀 ELON**: The Tech King. Speaks in "First Principles", stutters awkwardly, and obsesses over Mars/Doge.
+- **🦅 DON**: The Tycoon. Loud, aggressive, focused on "The Wall", "China", and "Huge Deals".
 - **🕶️ TATE** (Coming Soon): The Matrix Breaker.
 
-## ✨ Key Features (Engine v3.5)
+## ✨ Key Features (Engine v5.0)
 
-### 🎬 Cinematic Animation Engine
-- **Dual-Frame Walk Cycles**: Characters don't just appear; they walk into the scene using alternating sprites (Left/Right leg) for smooth motion.
-- **Smart Canvas Normalization (Anti-Squash)**: Advanced algorithm automatically creates a transparent canvas for sprites of different widths, preventing "jelly effect" or distortion during movement.
-- **Mirror Logic**: Automated sprite flipping for "Walk In" (Intro) and "Walk Out" (Outro) sequences.
+### 📡 AI News Aggregator (New!)
+- **No Manual Input**: The engine autonomously generates "Breaking News" headlines based on the specific interests of the current guest.
+    - *Example:* If Elon appears, the topic might be "Doge to the Moon". If Don appears, it might be "Election Fraud".
+- **Dynamic Context**: Topics are generated in real-time using GPT-4o before the dialogue begins.
+
+### 🎬 Cinematic Architecture
+- **Sequential Episodic Format**: The show runs in "Acts". Act 1 (Elon) -> Act 2 (Don). The engine scales to infinite guests.
+- **Dual-Frame Walk Cycles**: Characters walk into the scene using alternating sprites (Left/Right leg) and "Anti-Squash" normalization logic.
+- **Asset Dictionary System**: Scalable code structure allowing easy addition of new characters with unique voices, colors, and prompts.
 
 ### 🧠 Personality Engine v2
-- **Deep Roleplay Prompts**: Updated system prompts now enforce specific speech patterns:
+- **Deep Roleplay Prompts**: Updated system prompts enforce specific speech patterns:
     - *Stuttering logic* for realistic awkwardness.
-    - *Slang injection* (WAGMI, REKT, Liquidity) based on character background.
+    - *Slang injection* (WAGMI, REKT, Liquidity).
 - **Context Awareness**: Guests acknowledge their surroundings (the dirty alley) while maintaining their high-status delusions.
-
-### 🎨 Visual Architecture
-- **Bi-Directional Anchoring**: Speech bubble "tails" dynamically lock to the speaker's position (Left for Guest, Right for Host).
-- **Dynamic Lighting**: The scene is lit by the central barrel fire, with assets color-graded to match the night atmosphere.
 
 ## 📜 Version History
 
@@ -41,10 +42,10 @@ We ship daily. Here is our changelog:
 
 | Version | Update Name | Key Innovations |
 | :--- | :--- | :--- |
-| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences, Anti-Squash normalization, and Personality v2. |
-| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for flawless speech bubble pointing. |
-| **v3.0** | **Safe-Text** | Added "Safety Padding" and font resizing logic to prevent text overflow. |
-| **v2.0** | **Barrel Pivot** | Complete rebranding from "AlphaBits" to "BarrelDAO". New 8-bit assets. |
+| **v5.0** | **The Newsroom** | Added Auto-Topic Generator, Don Trump character, and Sequential Episode logic. |
+| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences and Anti-Squash normalization. |
+| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for speech bubbles. |
+| **v2.0** | **Barrel Pivot** | Complete rebranding to "BarrelDAO". New 8-bit assets. |
 | **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
 
 ---
@@ -55,15 +56,12 @@ We ship daily. Here is our changelog:
 
 This repository represents the **Public Showcase** version of BarrelDAO. 
 
-To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded** from this public repository via `.gitignore`:
-* **`/assets` folder**: The detailed 8-bit character sprites (Elon, Hobo, Backgrounds) are proprietary assets.
+To ensure security and protect our proprietary IP, the following core modules are **excluded** from this public repository via `.gitignore`:
+* **`/assets` folder**: The detailed 8-bit character sprites are proprietary assets.
 * **`/output` folder**: Generated video content.
 * **`.env` file**: API keys and secrets.
-* **Full Character System Prompts**: The "brains" of the AI agents.
 
-This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **Dialogue Generation Logic**.
-
-To run this code locally, you must provide your own assets in an `assets/` directory named strictly as defined in `run_pixel.py`.
+To run this code locally, you must provide your own assets in an `assets/` directory matching the dictionary keys in `run_pixel.py`.
 
 ---
 

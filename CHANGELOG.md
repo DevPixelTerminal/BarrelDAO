@@ -2,29 +2,39 @@
 
 All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Latest Version:** v3.5
+> **Latest Version:** v5.0
 > **Release Date:** 2026-01-09
+
+## [v5.0] - The "Newsroom" Update 📰
+
+We have achieved autonomy. The engine now selects its own topics and manages multiple guests sequentially.
+
+### 🚀 New Features
+* **Auto-News Generator (`get_auto_topic`)**:
+    * Replaced manual `input()` with an AI agent that scans character interests.
+    * Defined `TOPIC_INTERESTS` for each character (e.g., Elon likes "Mars", Don likes "The Wall").
+    * Generates satirical headlines on the fly.
+* **Sequential Episode Logic**:
+    * Refactored `main()` loop to support a playlist format (Act 1 -> Act 2).
+    * Guests now enter, converse, and leave one by one.
+* **New Character: DON**:
+    * Added full asset support (Idle, Talk, Blink, Walk 1/2).
+    * Added unique "Red Tie" UI theme (`#b71c1c`).
+    * Added unique personality prompt ("Loud", "Huge", "Fake News").
+* **Code Refactoring**:
+    * Moved from hardcoded variables to a scalable `ASSETS` dictionary.
+    * Simplified audio/visual pipelines to read directly from the dictionary.
+
+---
 
 ## [v3.5] - The "Alive" Update 🚶‍♂️
 
-This major update brings the scene to life with full movement logic and deeper AI personalities.
+This major update brought the scene to life with full movement logic.
 
-### 🚀 New Features
-* **Cinematic Entrance System**:
-    * Guests now spawn off-screen (`x: -400`) and walk to the barrel (`x: 550`).
-    * Implemented `create_walk_scene()` function handling both Intro and Outro.
-* **Dual-Frame Animation**:
-    * Engine now supports `walk_1` and `walk_2` sprites, alternating them every 5 frames for realistic leg movement.
-* **Anti-Squash Logic**:
-    * Added `normalize_size()` function. It creates a unified transparent canvas for sprites of varying widths, fixing the issue where characters would "shrink" or "expand" while walking.
-* **Personality v2**:
-    * Overhauled `SYSTEM_PROMPT`.
-    * **Elon**: Now uses specific vocabulary ("First principles", "Mars") and stutters ("Uhh...").
-    * **Hobo**: Uses more aggressive crypto-slang.
-
-### 🐛 Bug Fixes
-* Fixed `MoviePy Error: ImageSequenceClip requires all images to be the same size` by implementing dynamic canvas resizing.
-* Fixed floating speech bubbles by recalibrating `offset_x` coordinates for the new guest position.
+### Added
+* **Cinematic Entrance System**: Guests spawn off-screen and walk to the barrel.
+* **Dual-Frame Animation**: Support for `walk_1` and `walk_2` sprites.
+* **Anti-Squash Logic**: Algorithm to normalize sprite canvas size during movement.
 
 ---
 
@@ -33,10 +43,8 @@ This major update brings the scene to life with full movement logic and deeper A
 Focus on visual stability and dialogue rendering.
 
 ### Added
-* **Bi-Directional Anchors**: Logic to automatically flip speech bubble tails based on speaker position (Left vs Right).
-* **Color Themes**:
-    * **Hobo**: Brown/Orange theme (`#3e2723`).
-    * **Guest**: Dark/Blue theme (`#212121`).
+* **Bi-Directional Anchors**: Speech bubbles automatically flip based on speaker position.
+* **Color Themes**: Distinct UI colors for Host vs Guest.
 
 ---
 
@@ -45,13 +53,11 @@ Focus on visual stability and dialogue rendering.
 Complete conceptual overhaul from "AlphaBits" to "BarrelDAO".
 
 ### Changed
-* **Setting**: Replaced "Newsroom" background with "Dark Alleyway".
-* **Cast**: Replaced "Cat & Robot" with "Hobo & Elite Guests".
-* **Audio**: Updated beep tones to match gritty atmosphere.
+* **Setting**: Dark Alleyway background.
+* **Cast**: Hobo & Elite Guests.
 
 ---
 
 ## [v1.0] - Genesis
 
-* Initial Python script (`run_pixel.py`) deployment.
-* Basic OpenAI integration.
+* Initial Python script deployment.
