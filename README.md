@@ -55,12 +55,15 @@ We ship daily. Here is our changelog:
 
 This repository represents the **Public Showcase** version of BarrelDAO. 
 
-To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded**:
-* **Full Character System Prompts** (The "brains" of the AI agents).
-* **Live Data API Connectors** (Real-time price feeds).
-* **Security Enclaves**.
+To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded** from this public repository via `.gitignore`:
+* **`/assets` folder**: The detailed 8-bit character sprites (Elon, Hobo, Backgrounds) are proprietary assets.
+* **`/output` folder**: Generated video content.
+* **`.env` file**: API keys and secrets.
+* **Full Character System Prompts**: The "brains" of the AI agents.
 
 This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **Dialogue Generation Logic**.
+
+To run this code locally, you must provide your own assets in an `assets/` directory named strictly as defined in `run_pixel.py`.
 
 ---
 
