@@ -1,66 +1,39 @@
-# 👾 AlphaBits: The AI Sentiment Terminal
+# 🛢️ BarrelDAO: Night Shift Terminal
 
-**AlphaBits** is an autonomous, high-frequency AI broadcast engineered to decode the chaos of the Solana ecosystem. It combines **LLM-driven market analysis** with retro-gaming aesthetics to create the ultimate "Good Cop / Bad Cop" experience for crypto traders.
+**BarrelDAO** is an autonomous, satirical AI broadcast combining **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
 
-> **Current Version:** v3.3 (Stable UI & Bi-Directional Anchors)
-> **Status:** 🚀 Hyper-Speed Development
+> **Current Engine:** v3.3 (Stable UI & Bi-Directional Anchors)
+> **Concept:** 🔥 The Alpha is at the bottom.
 
-## 🧠 The Concept: "Sentiment vs. Security"
+## 🧠 The Concept: "Street Smarts vs. Elite Shills"
 
-Two AI agents exist in a perpetual feedback loop, analyzing live market data and user interactions:
+A fixed host (The Hobo) and a rotating cast of elite guests (Don, Elon, Tate, etc.) meet at a burning trash barrel at 3 AM to discuss the crypto apocalypse.
 
-- **👑 KING (The Degen)**: Represents **Greed & FOMO**. Uses sentiment analysis to detect viral potential. Screams "WAGMI", buys every dip, and ignores red flags.
-- **🤖 DUCK (The Bot)**: Represents **Fear & Logic**. Analyzes on-chain data for risk. Paranoid about rugs, checks liquidity locks, and begs you to take profits.
+## ✨ Key Features (Engine v3.3)
 
-## ✨ Key Features (v3.3)
-
-### 🎨 Cinematic UI Engine
-- **RPG Dialogue System**: Custom "Undertale-style" text rendering with colored bounding boxes specific to each character.
-- **Bi-Directional Anchoring**: Advanced vector logic ensures speech bubble "tails" always point correctly to the speaker, regardless of text length.
-- **Auto-Expanding Layout**: Dynamic padding calculation prevents text overflow, scaling seamlessly from 1 word to full paragraphs.
+### 🎨 Cinematic 8-Bit UI
+- **Gritty RPG Dialogue System**: Custom retro text rendering with character-specific colored borders.
+- **Bi-Directional Anchoring**: Advanced logic ensures speech bubble "tails" point correctly to the currently speaking character.
 
 ### ⚙️ Core Architecture
-- **Typewriter FX**: Character-by-character text generation synced with audio timing.
-- **Anti-Jitter Sprites**: Smart centering algorithms prevent asset displacement during "Blink" or "Talk" animations.
-- **Audio Synthesis**: Custom 8-bit voice modulation (Deep/Fast for King, High/Slow for Bot).
+- **Real-Personality AI**: Powered by **GPT-4o** with highly specific system prompts to emulate famous figures.
+- **Anti-Jitter Sprites**: Smart centering prevents asset displacement.
+- **8-Bit Audio Synthesis**: Custom retro voice modulation.
 
-## 📜 Version History
+## 📜 Version History (Engine)
 
-We ship daily. Here is our changelog:
+We ship daily. Here is our engine changelog:
 
 | Version | Update Name | Key Innovations |
 | :--- | :--- | :--- |
-| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic. Cat's tail now correctly locks to the right, Bot's to the left. Zero "floating" artifacts. |
+| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for flawless speech bubble pointing. Cat's tail now correctly locks to the right, Bot's to the left (adapted for new characters). |
 | **v3.0** | **Safe-Text** | Added "Safety Padding" and font resizing logic to prevent text overflow in long sentences. |
 | **v2.8** | **Speech Tails** | Added procedural triangle rendering to speech bubbles for comic-book style directionality. |
-| **v2.7** | **Color Identity** | UI overhaul: King gets Navy/Gold theme, Bot gets Brown/Yellow theme. |
-| **v2.6** | **Undertale Style** | Switched to high-contrast RPG aesthetics (Courier font, Black boxes, White borders). |
+| **v2.7** | **Color Identity** | UI overhaul with distinct character themes. |
+| **v2.6** | **Retro Style** | Switched to high-contrast 8-bit RPG aesthetics (Courier font, Black boxes, White borders). |
 | **v2.1** | **Typewriter** | Introduced dynamic text rendering time-synced with `wav` file duration. |
 | **v1.5** | **Pixel Perfect** | Aligned characters to exact Photoshop coordinates (Y-axis anchor fix). |
 | **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
-
-## 🗺️ Roadmap: The Intelligence Layer
-
-We are building the first **Visual AI Layer** for DeFi.
-
-### 🚧 Phase 2: Utility & Analysis (Active Sprint)
-*Focus: Real-time Data Integration*
-
-- [ ] **"Wallet Roast" Feature**:
-    - Users submit their wallet address via chat.
-    - The AI analyzes their worst trades (PnL) and "roasts" their decision-making live.
-- [ ] **Live "Rug Check" Debates**: 
-    - **Duck** scans contract code (Honeypot/Liquidity).
-    - **King** scans social sentiment (Twitter/Telegram).
-    - They debate live: "Alpha or Scam?".
-- [ ] **Reactive Environment**: Background lighting shifts Red/Green based on real-time Solana price action.
-
-### 🚀 Phase 3: Gamification (Next Up)
-*Focus: Community Interaction*
-
-- [ ] **AI Rap Battles**: Characters generate rhymes about trending coins on the fly.
-- [ ] **Chat-Controlled Portfolio**: Chat votes (!buy / !sell) influence the AI's virtual wallet.
-- [ ] **$BITS Token**: Governance token allowing holders to train the AI's personality parameters.
 
 ---
 
@@ -68,32 +41,14 @@ We are building the first **Visual AI Layer** for DeFi.
 
 **Note to Developers & Auditors:**
 
-This repository represents the **Public Showcase** version of AlphaBits. 
+This repository represents the **Public Showcase** version of BarrelDAO. 
 
-To ensure the security of our users and protect our proprietary trading algorithms, the following core modules are **excluded** from this public repository:
-* **Wallet Analysis Backend** (RPC Node connections & PnL calculators).
-* **Private API Gateways** (Direct exchange executions).
-* **Security Enclaves** (User data encryption logic).
+To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded**:
+* **Full Character System Prompts** (The "brains" of Don, Elon, Tate).
+* **Live Data API Connectors** (Price feeds integrated into dialogue).
+* **Security Enclaves**.
 
-This codebase is open-sourced to demonstrate our **Visual Engine** and **Generative Dialogue Logic**. The core execution layer remains private.
-
----
-
-## 🛠 Tech Stack
-
-- **Logic**: Python 3.10, OpenAI API (GPT-4o)
-- **Render**: MoviePy, Pillow (PIL), NumPy
-- **Audio**: Custom Soundfont Synthesis
-- **Deploy**: OBS Studio Integration
+This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **Dialogue Generation Logic**.
 
 ---
-
-### 🤝 Contributing
-
-We welcome degens and developers.
-1. Fork the repo.
-2. Create your feature branch (`git checkout -b feature/NewFeature`).
-3. Commit your changes.
-4. Open a Pull Request.
-
-*Built by degens, for degens.* 🚀
+*Built at the bottom, aimed at the moon.* 🚀
