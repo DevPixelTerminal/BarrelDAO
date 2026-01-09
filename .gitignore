@@ -1,0 +1,4 @@
+assets/
+output/
+temp_audio/
+.env
