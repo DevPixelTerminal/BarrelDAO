@@ -2,7 +2,7 @@
 
 **BarrelDAO** is an autonomous, satirical AI broadcast set in the darkest corner of the crypto winter. It combines **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
 
-> **Current Engine:** v5.0 (Auto-News Aggregator & Multi-Guest Support)
+> **Current Engine:** v5.2 (Living Environment & Atmospheric FX)
 > **Concept:** 🔥 The Alpha is at the bottom.
 
 ## 🧠 The Concept: "Street Smarts vs. Elite Shills"
@@ -18,23 +18,23 @@ Famous figures physically walk into the scene, debate the Host, and leave.
 - **🦅 DON**: The Tycoon. Loud, aggressive, focused on "The Wall", "China", and "Huge Deals".
 - **🕶️ TATE** (Coming Soon): The Matrix Breaker.
 
-## ✨ Key Features (Engine v5.0)
+## ✨ Key Features (Engine v5.2)
 
-### 📡 AI News Aggregator (New!)
+### 🔥 Living Environment (New!)
+- **Ping-Pong Animation Loop**: The background is no longer static. The barrel fire flickers using a smooth 4-frame "Ping-Pong" sequence (1-2-3-4-3-2-1), creating a natural, hypnotic atmosphere.
+- **Frame-Hold Logic**: Custom timing algorithms ensure the fire burns at a cinematic pace, avoiding "strobe" effects common in low-quality GIFs.
+
+### 📡 AI News Aggregator
 - **No Manual Input**: The engine autonomously generates "Breaking News" headlines based on the specific interests of the current guest.
-    - *Example:* If Elon appears, the topic might be "Doge to the Moon". If Don appears, it might be "Election Fraud".
 - **Dynamic Context**: Topics are generated in real-time using GPT-4o before the dialogue begins.
 
 ### 🎬 Cinematic Architecture
-- **Sequential Episodic Format**: The show runs in "Acts". Act 1 (Elon) -> Act 2 (Don). The engine scales to infinite guests.
-- **Dual-Frame Walk Cycles**: Characters walk into the scene using alternating sprites (Left/Right leg) and "Anti-Squash" normalization logic.
-- **Asset Dictionary System**: Scalable code structure allowing easy addition of new characters with unique voices, colors, and prompts.
+- **Sequential Episodic Format**: The show runs in "Acts" (Elon -> Don). The engine scales to infinite guests.
+- **Dual-Frame Walk Cycles**: Characters walk into the scene using alternating sprites and "Anti-Squash" normalization logic.
 
-### 🧠 Personality Engine v2
-- **Deep Roleplay Prompts**: Updated system prompts enforce specific speech patterns:
-    - *Stuttering logic* for realistic awkwardness.
-    - *Slang injection* (WAGMI, REKT, Liquidity).
-- **Context Awareness**: Guests acknowledge their surroundings (the dirty alley) while maintaining their high-status delusions.
+### 🎨 Visual Stability
+- **Robust Text Rendering**: Advanced bounding-box calculation ensures dialogue never overflows the speech bubbles, regardless of font size or sentence length.
+- **Bi-Directional Anchors**: Speech bubbles automatically flip tails based on speaker position.
 
 ## 📜 Version History
 
@@ -42,11 +42,12 @@ We ship daily. Here is our changelog:
 
 | Version | Update Name | Key Innovations |
 | :--- | :--- | :--- |
-| **v5.0** | **The Newsroom** | Added Auto-Topic Generator, Don Trump character, and Sequential Episode logic. |
-| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences and Anti-Squash normalization. |
-| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for speech bubbles. |
-| **v2.0** | **Barrel Pivot** | Complete rebranding to "BarrelDAO". New 8-bit assets. |
-| **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
+| **v5.2** | **Atmosphere** | Added "Ping-Pong" fire animation for the background. |
+| **v5.1** | **Safety Padding** | rewritten text-rendering engine to fix bubble overflow. |
+| **v5.0** | **The Newsroom** | Added Auto-Topic Generator, Don Trump, and Sequential Logic. |
+| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences. |
+| **v2.0** | **Barrel Pivot** | Complete rebranding to "BarrelDAO". |
+| **v1.0** | **Genesis** | Initial release. |
 
 ---
 
