@@ -1,54 +1,57 @@
-# 🛢️ BarrelDAO: Night Shift Terminal
+# 📜 BarrelDAO Change Log
 
-**BarrelDAO** is an autonomous, satirical AI broadcast combining **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
+All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Current Engine:** v3.3 (Stable UI & Bi-Directional Anchors)
-> **Concept:** 🔥 The Alpha is at the bottom.
+> **Latest Version:** v3.5
+> **Release Date:** 2026-01-09
 
-## 🧠 The Concept: "Street Smarts vs. Elite Shills"
+## [v3.5] - The "Alive" Update 🚶‍♂️
 
-A fixed host (The Hobo) and a rotating cast of elite guests (Don, Elon, Tate, etc.) meet at a burning trash barrel at 3 AM to discuss the crypto apocalypse.
+This major update brings the scene to life with full movement logic and deeper AI personalities.
 
-## ✨ Key Features (Engine v3.3)
+### 🚀 New Features
+* **Cinematic Entrance System**:
+    * Guests now spawn off-screen (`x: -400`) and walk to the barrel (`x: 550`).
+    * Implemented `create_walk_scene()` function handling both Intro and Outro.
+* **Dual-Frame Animation**:
+    * Engine now supports `walk_1` and `walk_2` sprites, alternating them every 5 frames for realistic leg movement.
+* **Anti-Squash Logic**:
+    * Added `normalize_size()` function. It creates a unified transparent canvas for sprites of varying widths, fixing the issue where characters would "shrink" or "expand" while walking.
+* **Personality v2**:
+    * Overhauled `SYSTEM_PROMPT`.
+    * **Elon**: Now uses specific vocabulary ("First principles", "Mars") and stutters ("Uhh...").
+    * **Hobo**: Uses more aggressive crypto-slang.
 
-### 🎨 Cinematic 8-Bit UI
-- **Gritty RPG Dialogue System**: Custom retro text rendering with character-specific colored borders.
-- **Bi-Directional Anchoring**: Advanced logic ensures speech bubble "tails" point correctly to the currently speaking character.
-
-### ⚙️ Core Architecture
-- **Real-Personality AI**: Powered by **GPT-4o** with highly specific system prompts to emulate famous figures.
-- **Anti-Jitter Sprites**: Smart centering prevents asset displacement.
-- **8-Bit Audio Synthesis**: Custom retro voice modulation.
-
-## 📜 Version History (Engine)
-
-We ship daily. Here is our engine changelog:
-
-| Version | Update Name | Key Innovations |
-| :--- | :--- | :--- |
-| **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for flawless speech bubble pointing. Cat's tail now correctly locks to the right, Bot's to the left (adapted for new characters). |
-| **v3.0** | **Safe-Text** | Added "Safety Padding" and font resizing logic to prevent text overflow in long sentences. |
-| **v2.8** | **Speech Tails** | Added procedural triangle rendering to speech bubbles for comic-book style directionality. |
-| **v2.7** | **Color Identity** | UI overhaul with distinct character themes. |
-| **v2.6** | **Retro Style** | Switched to high-contrast 8-bit RPG aesthetics (Courier font, Black boxes, White borders). |
-| **v2.1** | **Typewriter** | Introduced dynamic text rendering time-synced with `wav` file duration. |
-| **v1.5** | **Pixel Perfect** | Aligned characters to exact Photoshop coordinates (Y-axis anchor fix). |
-| **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
+### 🐛 Bug Fixes
+* Fixed `MoviePy Error: ImageSequenceClip requires all images to be the same size` by implementing dynamic canvas resizing.
+* Fixed floating speech bubbles by recalibrating `offset_x` coordinates for the new guest position.
 
 ---
 
-## 🔒 Source Code Disclosure
+## [v3.3] - Stable UI & Anchors ⚓
 
-**Note to Developers & Auditors:**
+Focus on visual stability and dialogue rendering.
 
-This repository represents the **Public Showcase** version of BarrelDAO. 
-
-To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded**:
-* **Full Character System Prompts** (The "brains" of Don, Elon, Tate).
-* **Live Data API Connectors** (Price feeds integrated into dialogue).
-* **Security Enclaves**.
-
-This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **Dialogue Generation Logic**.
+### Added
+* **Bi-Directional Anchors**: Logic to automatically flip speech bubble tails based on speaker position (Left vs Right).
+* **Color Themes**:
+    * **Hobo**: Brown/Orange theme (`#3e2723`).
+    * **Guest**: Dark/Blue theme (`#212121`).
 
 ---
-*Built at the bottom, aimed at the moon.* 🚀
+
+## [v2.0] - The Pivot 🛢️
+
+Complete conceptual overhaul from "AlphaBits" to "BarrelDAO".
+
+### Changed
+* **Setting**: Replaced "Newsroom" background with "Dark Alleyway".
+* **Cast**: Replaced "Cat & Robot" with "Hobo & Elite Guests".
+* **Audio**: Updated beep tones to match gritty atmosphere.
+
+---
+
+## [v1.0] - Genesis
+
+* Initial Python script (`run_pixel.py`) deployment.
+* Basic OpenAI integration.

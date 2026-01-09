@@ -2,57 +2,50 @@
 
 **BarrelDAO** is an autonomous, satirical AI broadcast set in the darkest corner of the crypto winter. It combines **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
 
-> **Current Engine:** v3.3 (Stable UI & Bi-Directional Anchors)
+> **Current Engine:** v3.5 (Cinematic Walk-Ins & Personality v2)
 > **Concept:** 🔥 The Alpha is at the bottom.
 
 ## 🧠 The Concept: "Street Smarts vs. Elite Shills"
 
-The stream features a fixed host and a rotating cast of elite guests meeting at a burning trash barrel at 3 AM to discuss market nukes, global economics, and conspiracy theories.
+The stream features a fixed host and a rotating cast of elite guests meeting at a burning trash barrel to discuss market nukes, global economics, and conspiracy theories.
 
 ### The Host (Fixed)
-- **🔥 HOBO (The Oracle of the Barrel)**: A homeless degen who lost everything in Luna/FTX but gained infinite wisdom. Cynical, grounded, sees through the BS. He warms his hands by the fire and judges the world.
+- **🔥 HOBO (The Oracle)**: A homeless degen who lost everything in FTX/Luna but gained infinite wisdom. Cynical, grounded, sees through the BS. He never leaves the barrel.
 
-### The Guests (Rotating)
-Famous figures visit the barrel to seek Hobo's approval or shill their bags. Their AI personalities are tuned to reflect their real-world personas:
+### The Guests (Dynamic Entrance)
+Famous figures physically walk into the scene to seek Hobo's approval.
+- **🚀 ELON**: The Tech King. Speaks in "First Principles", stutters awkwardly ("Uhh..."), and obsesses over Mars/Doge.
+- **🦅 DON** (Coming Soon): The Tycoon. Everything is "Huge" or a "Disaster".
+- **🕶️ TATE** (Coming Soon): The Matrix Breaker.
 
-- **🦅 DON (The Don)**: Talks only in "HUGE" terms, everything is "tremendous" or a "disaster". Focuses on making charts great again.
-- **🚀 ELON (The Engineer)**: Awkward, speaks in memes and physics metaphors. Obsessed with Mars, AI, and Dogcoins.
-- **🕶️ TATE (The Top G)**: Aggressive, talks about "escaping the matrix" (the bear market), hustling, and Bugattis. Calls everyone "brokie".
+## ✨ Key Features (Engine v3.5)
 
-## ✨ Key Features (Engine v3.3)
+### 🎬 Cinematic Animation Engine
+- **Dual-Frame Walk Cycles**: Characters don't just appear; they walk into the scene using alternating sprites (Left/Right leg) for smooth motion.
+- **Smart Canvas Normalization (Anti-Squash)**: Advanced algorithm automatically creates a transparent canvas for sprites of different widths, preventing "jelly effect" or distortion during movement.
+- **Mirror Logic**: Automated sprite flipping for "Walk In" (Intro) and "Walk Out" (Outro) sequences.
 
-### 🎨 Cinematic 8-Bit UI
-- **Gritty RPG Dialogue System**: Custom retro text rendering with character-specific colored borders (Rusty Brown for Hobo, Gold for Don, Electric Blue for Elon, etc.).
-- **Bi-Directional Anchoring**: Advanced logic ensures speech bubble "tails" point correctly to the currently speaking character, maintaining the pixel-art illusion.
+### 🧠 Personality Engine v2
+- **Deep Roleplay Prompts**: Updated system prompts now enforce specific speech patterns:
+    - *Stuttering logic* for realistic awkwardness.
+    - *Slang injection* (WAGMI, REKT, Liquidity) based on character background.
+- **Context Awareness**: Guests acknowledge their surroundings (the dirty alley) while maintaining their high-status delusions.
 
-### ⚙️ Core Architecture
-- **Real-Personality AI**: Powered by **GPT-4o** with highly specific system prompts to emulate the speech patterns of famous figures without emojis.
-- **Anti-Jitter Sprites**: Smart centering prevents asset displacement during animations.
-- **8-Bit Audio Synthesis**: Custom retro voice modulation adapted for each character's tone.
+### 🎨 Visual Architecture
+- **Bi-Directional Anchoring**: Speech bubble "tails" dynamically lock to the speaker's position (Left for Guest, Right for Host).
+- **Dynamic Lighting**: The scene is lit by the central barrel fire, with assets color-graded to match the night atmosphere.
 
-## 📜 Version History (Engine)
+## 📜 Version History
 
-We ship daily. Here is our engine changelog:
+We ship daily. Here is our changelog:
 
 | Version | Update Name | Key Innovations |
 | :--- | :--- | :--- |
+| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences, Anti-Squash normalization, and Personality v2. |
 | **v3.3** | **Stable Tails** | Implemented bi-directional anchor logic for flawless speech bubble pointing. |
 | **v3.0** | **Safe-Text** | Added "Safety Padding" and font resizing logic to prevent text overflow. |
-| **v2.6** | **Retro Style** | Switched to high-contrast 8-bit RPG aesthetics (Courier font). |
+| **v2.0** | **Barrel Pivot** | Complete rebranding from "AlphaBits" to "BarrelDAO". New 8-bit assets. |
 | **v1.0** | **Genesis** | Initial release. Static images + OpenAI logic. |
-
-## 🗺️ Roadmap: The Degen's Journey
-
-We are building the most immersive AI shill-station.
-
-### 🚧 Phase 2: Interaction (Active Sprint)
-- [ ] **"Spare Change?" Feature**: Chat donations trigger visual effects (throwing coins into the barrel fire).
-- [ ] **Guest Rotation Logic**: Automated system to swap guests (Don -> Elon -> Tate) after a set number of dialogue lines.
-- [ ] **Reactive Fire**: The barrel fire intensifies when Solana price pumps green.
-
-### 🚀 Phase 3: Gamification (Next Up)
-- [ ] **AI Roast Battles**: Hobo roasts the guest's net worth vs. his own freedom.
-- [ ] **$BARREL Token**: Governance token to vote on who visits the barrel next.
 
 ---
 
@@ -63,8 +56,8 @@ We are building the most immersive AI shill-station.
 This repository represents the **Public Showcase** version of BarrelDAO. 
 
 To ensure security and protect our proprietary personality prompt engineering, the following core modules are **excluded**:
-* **Full Character System Prompts** (The "brains" of Don, Elon, Tate).
-* **Live Data API Connectors** (Price feeds integrated into dialogue).
+* **Full Character System Prompts** (The "brains" of the AI agents).
+* **Live Data API Connectors** (Real-time price feeds).
 * **Security Enclaves**.
 
 This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **Dialogue Generation Logic**.
@@ -76,7 +69,6 @@ This codebase is open-sourced to demonstrate our **Visual 8-Bit Engine** and **D
 - **Logic**: Python 3.10, OpenAI API (GPT-4o)
 - **Render**: MoviePy, Pillow (PIL), NumPy
 - **Audio**: Custom Soundfont Synthesis
-- **Deploy**: OBS Studio Integration
 
 ---
 
