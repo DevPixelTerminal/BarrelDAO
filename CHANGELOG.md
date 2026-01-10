@@ -2,8 +2,32 @@
 
 All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Latest Version:** v5.6
+> **Latest Version:** v6.3
 > **Release Date:** 2026-01-10
+
+## [v6.3] - The "Top G" Update 🕶️💨
+
+Added the fourth guest character: **Andrew (TATE)** and advanced animation physics.
+
+### 🚀 New Features
+* **New Character Integrated: TATE**:
+    * Added full asset support (`andrew`, `andrew_talk`, `andrew_smoke`, `andrew_walk`).
+    * Configured "Top G" UI theme (Black BG / Gold Border).
+    * **Personality Engine**: Prompts focused on "Matrix", "Sparkling Water", and calling people "Brokies".
+* **Cigar Physics Engine (`BLINK_LEN`)**:
+    * Implemented variable blink duration. Tate now takes a long drag from his cigar (15 frames) instead of a standard blink (3 frames).
+* **Smart Alignment System (`TALK_OFFSET_X`)**:
+    * Added manual offset correction to fix characters shifting sideways during talking animations due to sprite width differences (e.g., when raising a hand or cigar).
+
+## [v6.0] - The "Stable Scale" Update 📐
+
+Major overhaul of the rendering pipeline.
+
+### 🐛 Bug Fixes
+* **Auto-Crop Removal**: Removed the unstable auto-cropping logic that caused characters to shrink/grow unpredictably.
+* **Smart Scaling**: The engine now calculates the zoom factor based *only* on the IDLE sprite and applies it consistently to all other animations (Talk/Walk), preventing size jittering.
+
+---
 
 ## [v5.6] - The "Optimization" Update ⚡
 
@@ -11,29 +35,10 @@ Added the third guest character: **Anatoly (TOLY)**.
 
 ### 🚀 New Features
 * **New Character Integrated: TOLY**:
-    * Added full asset support (`toly_idle`, `toly_talk`, `toly_walk_1`, `toly_walk_2`).
     * Configured Solana-themed UI colors (Purple BG / Green Border).
-    * **Personality Engine**: Added specific prompts for "Chewing Glass" metaphors and technical jargon about throughput and latency.
+    * **Personality Engine**: Added specific prompts for "Chewing Glass" metaphors and technical jargon about throughput.
 * **Expanded Playlist**:
-    * Main loop now runs 3 episodes sequentially: Elon -> Toly -> Don.
-
-## [v5.2] - The "Atmosphere" Update 🔥
-
-Focus on visual immersion and dynamic backgrounds.
-
-### 🚀 New Features
-* **Animated Background Engine**:
-    * Replaced static `BG_IMAGE` with a `BG_FILES` array supporting multiple frames (JPEG/PNG).
-    * Implemented `create_flickering_bg()` function using a "Ping-Pong" loop pattern (`[0, 1, 2, 3, 2, 1]`) for smooth, non-repetitive fire animation.
-
-## [v5.1] - Visual Stability Fixes 📐
-
-Critical hotfix for UI rendering.
-
-### 🐛 Bug Fixes
-* **Text Overflow Fix**:
-    * Rewrote `get_text_dimensions_robust()` to calculate exact pixel width of text strings instead of estimating via character count.
-    * Added "Safety Padding" (+25px) to speech bubbles to prevent text clipping on the right edge.
+    * Main loop now runs sequentially: Elon -> Toly -> Don -> Tate.
 
 ---
 
@@ -42,15 +47,4 @@ Critical hotfix for UI rendering.
 We have achieved autonomy. The engine now selects its own topics.
 
 ### 🚀 New Features
-* **Auto-News Generator (`get_auto_topic`)**:
-    * AI agent scans character interests and generates satirical headlines on the fly.
-* **Sequential Episode Logic**:
-    * Refactored main loop to support playlist format (Act 1 -> Act 2).
-* **New Character: DON**:
-    * Added full asset support and unique "Red Tie" UI theme.
-
----
-
-## [v1.0] - Genesis
-
-* Initial Python script deployment.
+* **Auto-News Generator**: AI agent scans character interests and generates satirical headlines on the fly.

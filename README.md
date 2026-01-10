@@ -2,7 +2,7 @@
 
 **BarrelDAO** is an autonomous, satirical AI broadcast set in the darkest corner of the crypto winter. It combines **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
 
-> **Current Engine:** v5.6 (The Optimization Update)
+> **Current Engine:** v6.3 (The Top G Update)
 > **Concept:** 🔥 The Alpha is at the bottom.
 
 ## 🧠 The Concept: "Street Smarts vs. Elite Shills"
@@ -17,18 +17,20 @@ Famous figures physically walk into the scene, debate the Host, and leave.
 - **🚀 ELON**: The Tech King. Speaks in "First Principles", stutters awkwardly, and obsesses over Mars/Doge.
 - **⚡ TOLY**: The Builder. High-speed engineer, loves "eating glass" and optimizing throughput. Hates Ethereum gas fees.
 - **🦅 DON**: The Tycoon. Loud, aggressive, focused on "The Wall", "China", and "Huge Deals".
+- **🕶️ TATE**: The Top G. Arrogant, smokes cigars, talks about "Escaping the Matrix" and his Bugatti collection. Calls everyone "Brokies".
 
-## ✨ Key Features (Engine v5.6)
+## ✨ Key Features (Engine v6.3)
 
-### 🔥 Living Environment
-- **Ping-Pong Animation Loop**: The background is no longer static. The barrel fire flickers using a smooth 4-frame "Ping-Pong" sequence (1-2-3-4-3-2-1), creating a natural, hypnotic atmosphere.
+### 🔥 Advanced Animation Physics
+- **Cigar Logic**: Unlike standard blinking, Tate has a custom animation cycle where he takes a long drag from his cigar every few seconds.
+- **Smart Alignment**: Characters with complex sprites (raising hands, smoking) are now automatically stabilized so they don't "jitter" or shift sideways while talking.
 
 ### 📡 AI News Aggregator
 - **No Manual Input**: The engine autonomously generates "Breaking News" headlines based on the specific interests of the current guest.
 - **Dynamic Context**: Topics are generated in real-time using GPT-4o before the dialogue begins.
 
 ### 🎬 Cinematic Architecture
-- **Sequential Episodic Format**: The show runs in "Acts" (Elon -> Toly -> Don). The engine scales to infinite guests.
+- **Sequential Episodic Format**: The show runs in "Acts" (Elon -> Toly -> Don -> Tate). The engine scales to infinite guests.
 - **Dual-Frame Walk Cycles**: Characters walk into the scene using alternating sprites and "Anti-Squash" normalization logic.
 
 ## 📜 Version History
@@ -37,12 +39,11 @@ We ship daily. Here is our changelog:
 
 | Version | Update Name | Key Innovations |
 | :--- | :--- | :--- |
-| **v5.6** | **Optimization** | Added Toly (Solana), Glass-Chewing Logic, and Dev Cap assets. |
+| **v6.3** | **Top G** | Added Tate, Cigar Animation, and Talk-Offset correction. |
+| **v6.0** | **Stability** | Fixed sprite scaling issues and auto-crop bugs. |
+| **v5.6** | **Optimization** | Added Toly (Solana), Glass-Chewing Logic. |
 | **v5.2** | **Atmosphere** | Added "Ping-Pong" fire animation for the background. |
-| **v5.1** | **Safety Padding** | rewritten text-rendering engine to fix bubble overflow. |
-| **v5.0** | **The Newsroom** | Added Auto-Topic Generator, Don Trump, and Sequential Logic. |
-| **v3.5** | **Alive** | Added "Walk-In/Walk-Out" cinematic sequences. |
-| **v2.0** | **Barrel Pivot** | Complete rebranding to "BarrelDAO". |
+| **v5.0** | **The Newsroom** | Added Auto-Topic Generator and Don Trump. |
 | **v1.0** | **Genesis** | Initial release. |
 
 ---
