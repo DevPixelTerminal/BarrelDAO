@@ -1,4 +1,4 @@
-# 🛢️ BarrelDAO: Night Shift Terminal (v6.3)
+# 🛢️ BarrelDAO: Night Shift Terminal (v6.4)
 
 > **Status:** Autonomous | **Uptime:** 24/7 | **Vibe:** Bear Market Apocalyptic
 
@@ -43,7 +43,7 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 * **Visuals:** Bald, sunglasses, muscle fit tee.
 * **Unique Physics (`Cigar Engine`):**
     * Uses a custom `BLINK_LEN` of **15 frames** (instead of standard 3) to simulate a long, slow drag from his cigar.
-    * Uses `TALK_OFFSET_X` to compensate for sprite width changes when raising his hand.
+    * Uses the `OFFSETS` system to synchronize body position between smoking and talking.
 
 ---
 
@@ -55,10 +55,10 @@ The system needs no human input.
 * **Process:** GPT-4o generates a satirical "Breaking News" headline based on those interests.
 * **Output:** "Bitcoin crashes because CEO forgot password" (Example).
 
-### 2. The "Smart-Align" Render Pipeline (v6.3)
-Pixel art often breaks when characters move (e.g., raising a hand makes the image wider, shifting the body center). We solved this with a custom alignment algorithm:
-* **Anchor Point:** Characters are anchored by their **Bottom-Left** pixel (the "Spine"), not the center.
-* **Manual Offset (`TALK_OFFSET_X`):** A variable that forcefully pushes the character back if a specific animation frame (like Tate smoking) throws off the balance.
+### 2. The "Offset-Sync" Render Pipeline (v6.4)
+Pixel art often breaks when characters perform complex actions (like smoking or raising hands), changing the sprite's center of mass.
+* **Problem:** Center-alignment causes the character to "jump" left or right when the sprite width changes.
+* **Solution:** We implemented a granular `OFFSETS` dictionary. We can manually shift the character on the X-axis for *each specific state* (Idle, Talk, Blink) to ensure they stay perfectly planted on the ground.
 
 ### 3. Dynamic "Ping-Pong" Atmosphere
 Static backgrounds are boring. We use a **4-frame loop pattern (`0-1-2-3-2-1`)** to create a smooth, flickering fire effect in the barrel, giving the scene life without consuming excessive rendering resources.
@@ -67,12 +67,21 @@ Static backgrounds are boring. We use a **4-frame loop pattern (`0-1-2-3-2-1`)**
 
 ## 🛠 Configuration Guide
 
-To tweak characters, edit the `ASSETS` dictionary in `run_pixel.py`:
+To tweak characters, edit the `ASSETS` dictionary in `run_pixel.py`.
+
+**v6.4 Update:** We now use an `OFFSETS` dictionary for precise alignment.
 
 ```python
 "CHAR_NAME": {
     "SCALE": 1.0,          # Size multiplier (1.0 = 700px height)
     "OFFSET_Y": 0,         # Vertical shift (Fixes floating feet)
     "BLINK_LEN": 3,        # Duration of blink (3 = Fast, 15 = Long Drag)
-    "TALK_OFFSET_X": 45    # Horizontal correction for wide sprites
+    
+    # Manual Alignment Fix (X-Axis)
+    # Allows shifting specific states if the sprite width causes jumping.
+    "OFFSETS": {
+        "IDLE": -50,   # Shift LEFT when silent
+        "TALK": 0,     # Anchor point (Talking)
+        "BLINK": -50   # Shift LEFT when smoking
+    }
 }
