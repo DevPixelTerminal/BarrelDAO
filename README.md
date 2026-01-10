@@ -1,65 +1,78 @@
-# 🛢️ BarrelDAO: Night Shift Terminal
+# 🛢️ BarrelDAO: Night Shift Terminal (v6.3)
 
-**BarrelDAO** is an autonomous, satirical AI broadcast set in the darkest corner of the crypto winter. It combines **LLM-driven personality emulation** with gritty 8-bit aesthetics to create the ultimate late-night talk show for degens.
+> **Status:** Autonomous | **Uptime:** 24/7 | **Vibe:** Bear Market Apocalyptic
 
-> **Current Engine:** v6.3 (The Top G Update)
-> **Concept:** 🔥 The Alpha is at the bottom.
-
-## 🧠 The Concept: "Street Smarts vs. Elite Shills"
-
-The stream features a fixed host and a rotating cast of elite guests meeting at a burning trash barrel to discuss market nukes, global economics, and conspiracy theories.
-
-### The Host (Fixed)
-- **🔥 HOBO (The Oracle)**: A homeless degen who lost everything in FTX/Luna but gained infinite wisdom. Cynical, grounded, sees through the BS. He never leaves the barrel.
-
-### The Guests (Active Roster)
-Famous figures physically walk into the scene, debate the Host, and leave.
-- **🚀 ELON**: The Tech King. Speaks in "First Principles", stutters awkwardly, and obsesses over Mars/Doge.
-- **⚡ TOLY**: The Builder. High-speed engineer, loves "eating glass" and optimizing throughput. Hates Ethereum gas fees.
-- **🦅 DON**: The Tycoon. Loud, aggressive, focused on "The Wall", "China", and "Huge Deals".
-- **🕶️ TATE**: The Top G. Arrogant, smokes cigars, talks about "Escaping the Matrix" and his Bugatti collection. Calls everyone "Brokies".
-
-## ✨ Key Features (Engine v6.3)
-
-### 🔥 Advanced Animation Physics
-- **Cigar Logic**: Unlike standard blinking, Tate has a custom animation cycle where he takes a long drag from his cigar every few seconds.
-- **Smart Alignment**: Characters with complex sprites (raising hands, smoking) are now automatically stabilized so they don't "jitter" or shift sideways while talking.
-
-### 📡 AI News Aggregator
-- **No Manual Input**: The engine autonomously generates "Breaking News" headlines based on the specific interests of the current guest.
-- **Dynamic Context**: Topics are generated in real-time using GPT-4o before the dialogue begins.
-
-### 🎬 Cinematic Architecture
-- **Sequential Episodic Format**: The show runs in "Acts" (Elon -> Toly -> Don -> Tate). The engine scales to infinite guests.
-- **Dual-Frame Walk Cycles**: Characters walk into the scene using alternating sprites and "Anti-Squash" normalization logic.
-
-## 📜 Version History
-
-We ship daily. Here is our changelog:
-
-| Version | Update Name | Key Innovations |
-| :--- | :--- | :--- |
-| **v6.3** | **Top G** | Added Tate, Cigar Animation, and Talk-Offset correction. |
-| **v6.0** | **Stability** | Fixed sprite scaling issues and auto-crop bugs. |
-| **v5.6** | **Optimization** | Added Toly (Solana), Glass-Chewing Logic. |
-| **v5.2** | **Atmosphere** | Added "Ping-Pong" fire animation for the background. |
-| **v5.0** | **The Newsroom** | Added Auto-Topic Generator and Don Trump. |
-| **v1.0** | **Genesis** | Initial release. |
+**BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **retro 32-bit aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
 
 ---
 
-## 🔒 Source Code Disclosure
+## 🎭 The Cast (Personality & Assets)
 
-**Note to Developers & Auditors:**
+The engine currently supports a robust roster of AI agents, each with unique visual behaviors and prompt-engineered speech patterns.
 
-To run this code locally, you must provide your own assets in an `assets/` directory matching the dictionary keys in `run_pixel.py`.
+### 🏠 The Host (Resident)
+#### 🔥 HOBO (The Oracle)
+* **Archetype:** The Fallen Trader.
+* **Backstory:** Lost his life savings in the FTX crash. Now lives in a barrel, burning fiat currency for warmth. He is cynical, grounded, and the only one who sees reality clearly.
+* **Visuals:** Dirty coat, fingerless gloves.
+* **AI Logic:** Responds with dark humor and market metaphors (e.g., "My net worth is currently stable at zero").
+
+### ⭐️ The Guests (Rotation)
+
+#### 🚀 ELON (The Tech King)
+* **Archetype:** Visionary / Meme Lord.
+* **Behaviors:** Stutters when excited. Obsessed with "First Principles", Mars colonization, and DOGE ticker price.
+* **Physics:** Standard movement.
+* **Key Topics:** Rockets exploding, AI safety, X (Twitter) drama.
+
+#### 🦅 DON (The Tycoon)
+* **Archetype:** The Populist Dealmaker.
+* **Behaviors:** Loud, aggressive, hand-accordion gestures. Uses superlatives ("HUGE", "DISASTER").
+* **Visuals:** Oversized red tie, blue suit.
+* **AI Logic:** Focuses on "The Wall", "China", and personal grievances.
+
+#### ⚡ TOLY (The Builder)
+* **Archetype:** The High-Speed Engineer.
+* **Behaviors:** Intense, practical. Speaks in technical jargon about "Throughput" and "Latency".
+* **Quote:** "Building a startup is like chewing glass."
+* **Special Logic:** Uses custom scale settings (`0.85`) to match the sprite style.
+
+#### 🕶️ TATE (The Top G)
+* **Archetype:** The Matrix Breaker.
+* **Behaviors:** Arrogant, alpha-posturing. Smokes a cigar constantly. Calls everyone "Brokies".
+* **Visuals:** Bald, sunglasses, muscle fit tee.
+* **Unique Physics (`Cigar Engine`):**
+    * Uses a custom `BLINK_LEN` of **15 frames** (instead of standard 3) to simulate a long, slow drag from his cigar.
+    * Uses `TALK_OFFSET_X` to compensate for sprite width changes when raising his hand.
 
 ---
 
-## 🛠 Tech Stack
+## ⚙️ Engine Mechanics (Under the Hood)
 
-- **Logic**: Python 3.10, OpenAI API (GPT-4o)
-- **Render**: MoviePy, Pillow (PIL), NumPy
-- **Audio**: Custom Soundfont Synthesis
+### 1. Autonomous News Aggregator
+The system needs no human input.
+* **Input:** The engine checks the `TOPIC_INTERESTS` of the current guest.
+* **Process:** GPT-4o generates a satirical "Breaking News" headline based on those interests.
+* **Output:** "Bitcoin crashes because CEO forgot password" (Example).
 
-*Built at the bottom, aimed at the moon.* 🚀
+### 2. The "Smart-Align" Render Pipeline (v6.3)
+Pixel art often breaks when characters move (e.g., raising a hand makes the image wider, shifting the body center). We solved this with a custom alignment algorithm:
+* **Anchor Point:** Characters are anchored by their **Bottom-Left** pixel (the "Spine"), not the center.
+* **Manual Offset (`TALK_OFFSET_X`):** A variable that forcefully pushes the character back if a specific animation frame (like Tate smoking) throws off the balance.
+
+### 3. Dynamic "Ping-Pong" Atmosphere
+Static backgrounds are boring. We use a **4-frame loop pattern (`0-1-2-3-2-1`)** to create a smooth, flickering fire effect in the barrel, giving the scene life without consuming excessive rendering resources.
+
+---
+
+## 🛠 Configuration Guide
+
+To tweak characters, edit the `ASSETS` dictionary in `run_pixel.py`:
+
+```python
+"CHAR_NAME": {
+    "SCALE": 1.0,          # Size multiplier (1.0 = 700px height)
+    "OFFSET_Y": 0,         # Vertical shift (Fixes floating feet)
+    "BLINK_LEN": 3,        # Duration of blink (3 = Fast, 15 = Long Drag)
+    "TALK_OFFSET_X": 45    # Horizontal correction for wide sprites
+}
