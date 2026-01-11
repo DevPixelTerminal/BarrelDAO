@@ -2,8 +2,29 @@
 
 All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Current Version:** v6.5
-> **Release Date:** 2026-01-10
+> **Current Version:** v7.0
+> **Release Date:** 2026-01-11
+
+---
+
+## [v7.0] - The "Meme Lord" Update 🤡
+**Major AI & Core Overhaul.**
+Shifted the engine from "News Aggregation" to "Satirical Chaos". The goal is to maximize entertainment value and meme potential.
+
+### 🧠 AI Core: "Chaos Mode"
+* **Replaced Topic Logic**: Removed static interest lists. The engine now generates unique, absurd, and satirical headlines (The Onion / Pump.fun style) for every episode.
+* **Adult Swim Tone**: Tuned OpenAI `temperature` to **1.3**. Characters now use slang (WAGMI, REKT, Copium), mild profanity, and aggressive roasting.
+* **Deep Talk**: Increased dialogue length to **12-16 lines** for deeper, more philosophical (and delusional) debates.
+
+### 🎨 Visual Engine: "Smart Bubbles"
+* **Boundary Injection**: Implemented a mathematical "Guard Rail" system for text bubbles.
+    * Logic: `if x < 10: x = 10`.
+    * **Result**: Text bubbles no longer clip off-screen, regardless of how long the text is or where the character stands.
+* **Stage Re-Balancing**: Moved all Guest characters significantly to the LEFT (`x=200-500` range) to improve composition and stop them from blocking the barrel.
+
+### 🔊 Audio & System
+* **AAC Codec Enforcement**: Switched audio encoding to `aac` to fix silent video issues on Windows/OBS.
+* **Local Dev Optimization**: Adjusted rendering threads for stability on local Windows machines.
 
 ---
 
@@ -15,8 +36,7 @@ Achieved perfect character stability without manual tweaking.
 * **Spine-Based Alignment (Left-Align)**:
     * Replaced the complex offset logic with a pure "Spine Anchor" system.
     * Characters are now anchored strictly to `x=0` (Left Edge) of their sprite.
-    * **Result:** Andrew Tate no longer "jitters" or jumps sideways when transitioning between `Idle` (narrow sprite) and `Smoke` (wide sprite). The back of the character remains immovable.
-* **Code Cleanup**: Removed `TALK_OFFSET_X` and manual `OFFSETS` values from the configuration, as the auto-alignment engine now handles this natively.
+* **Code Cleanup**: Removed `TALK_OFFSET_X` and manual `OFFSETS` values from the configuration.
 
 ---
 
@@ -27,7 +47,6 @@ Achieved perfect character stability without manual tweaking.
 * **State-Specific Offsets**:
     * Introduced the `OFFSETS` dictionary in the config.
     * Allowed developers to manually shift `IDLE`, `TALK`, and `BLINK` states independently on the X-axis.
-    * *Note: This feature was superseded by the v6.5 Spine-Alignment update but remains in the codebase for legacy support.*
 
 ---
 
@@ -38,15 +57,8 @@ Added Andrew Tate and implemented complex animation logic to support non-standar
 ### 🚀 New Features
 * **New Character: ANDREW (TATE)**
     * Integrated "Top G" persona: obsessed with The Matrix, Bugattis, and Sparkling Water.
-    * Added specific assets: `andrew.png` (Idle), `andrew_talk.png` (Talk), `andrew_smoke.png` (Action).
-    * **UI Theme:** Black background with Gold borders (#FFD700).
-* **Cigar Physics Engine (`BLINK_LEN`)**
-    * The engine now supports variable blink durations.
-    * **Logic:** Standard characters blink for 3 frames. Tate takes a drag from his cigar for **15 frames**.
-    * This allows for "Action Idle" animations (drinking, smoking, looking at phone) without changing the core loop.
-
-### 🐛 Bug Fixes
-* **Playlist Logic**: Enabled all guests in the main loop. The show now runs sequentially: Elon -> Toly -> Don -> Tate.
+* **Cigar Physics Engine (`BLINK_LEN`)**:
+    * Logic: Tate takes a drag from his cigar for **15 frames** (vs standard 3).
 
 ---
 
@@ -54,47 +66,22 @@ Added Andrew Tate and implemented complex animation logic to support non-standar
 **Rendering Core Overhaul.**
 
 ### 🐛 Bug Fixes
-* **Fixed "Jumping Size" Glitch**: Characters no longer change size when blinking or talking.
-    * **Solution:** The engine now calculates the `zoom_factor` based *only* on the IDLE sprite dimensions and applies that exact factor to all other sprites, regardless of their crop size.
-* **Fixed "Floating Feet"**: Replaced Center-Bottom alignment with Left-Bottom alignment for better stability.
+* **Fixed "Jumping Size" Glitch**: The engine now calculates `zoom_factor` based only on IDLE sprite dimensions.
+* **Fixed "Floating Feet"**: Replaced Center-Bottom alignment with Left-Bottom alignment.
 
 ---
 
 ## [v6.0] - Stable Release 🛡️
-**Critical Rollback.**
-* Removed the experimental `Auto-Crop` feature which was accidentally cutting off character limbs.
-* Reverted to "Canvas Trust" logic: The engine now trusts that the input PNGs are correctly framed by the artist.
+* Reverted to "Canvas Trust" logic: The engine now trusts that the input PNGs are correctly framed.
 
 ---
 
 ## [v5.6] - The "Optimization" Update ⚡
-Added Solana integration and rendering speedups.
-
-### 🚀 New Features
-* **New Character: TOLY (Solana)**
-    * Added `toly_idle`, `toly_talk`, `toly_walk` assets.
-    * Persona prompt: "High throughput, chewing glass, hates gas fees."
-    * **Manual Scale**: Implemented specific scaling (`SCALE: 0.85`) for characters with unique proportions.
-* **Fast Mode Rendering**:
-    * Switched `moviepy` preset to `ultrafast`.
-    * Reduced framerate to **12 FPS** (matches pixel art style better and renders 2x faster).
-    * Enabled Multi-threading (4 threads).
+* **New Character: TOLY (Solana)**.
+* **Fast Mode Rendering**: Switched `moviepy` preset to `ultrafast` (12 FPS).
 
 ---
 
 ## [v5.0] - The "Newsroom" Update 📰
-**AI Autonomy Milestone.**
-
-### 🚀 New Features
-* **Auto-Topic Generator**:
-    * The script now queries GPT-4o to invent a news headline based on the guest's interests before generating dialogue.
-    * Eliminated manual input prompts.
-* **New Character: DON (Trump)**
-    * Integrated assets with the iconic red tie and "MAGA" speech patterns.
-
----
-
-## [v1.0 - v4.0] - The Foundation 🏗️
-* **v3.5**: Added Cinematic Walk-In/Walk-Out sequences.
-* **v2.0**: Rebranding to "BarrelDAO".
-* **v1.0**: Initial Python script deployment.
+* **Auto-Topic Generator**: First implementation of GPT-4o headlines.
+* **New Character: DON (Trump)**.
