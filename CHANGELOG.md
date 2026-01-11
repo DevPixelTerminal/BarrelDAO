@@ -2,8 +2,25 @@
 
 All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Current Version:** v7.1
+> **Current Version:** v7.2
 > **Release Date:** 2026-01-11
+
+---
+
+## [v7.2] - The "We Are So Back" Update 📈
+**Roster Expansion & Animation Upgrade.**
+Injected pure "Crypto Twitter" chaos into the simulation. Added the first streamer archetype to contrast with the billionaires and builders.
+
+### 🧢 New Character: THREADGUY
+* **Added `THREADGUY` to the roster.**
+    * **Archetype:** The "Degen Streamer". Represents the manic highs and lows of the market.
+    * **Visuals:** Highly detailed 32-bit sprite featuring the iconic white zip-up hoodie (with purple Twitch logo), messy "broccoli" hair, and grey sweatpants.
+    * **Persona:** Unhinged, loud, and emotional. Uses specific internet slang ("I am cooked", "It is over", "We are so back", "Apeing").
+    * **Audio:** Custom 8-bit voice pitch-shifted to match his energetic speaking style.
+    * **Assets:** Full integration of `WALK`, `WALK_2` (scissor-step logic), `TALK`, and `BLINK` sprites.
+
+### 🎨 Visual Polish
+* **Twitch Aesthetic:** Implemented a new custom text bubble color scheme (`#6441a5` Background) specifically for ThreadGuy to match his branding.
 
 ---
 
@@ -48,71 +65,3 @@ Shifted the engine from "News Aggregation" to "Satirical Chaos". The goal is to 
 ### 🔊 Audio & System
 * **AAC Codec Enforcement**: Switched audio encoding to `aac` via FFMPEG to fix silent video issues on Windows/OBS environments.
 * **Local Dev Optimization**: Adjusted rendering threads for stability on local Windows machines.
-
----
-
-## [v6.5] - The "Perfect Stance" Update 🧍‍♂️
-**Final Physics Fix.**
-Achieved perfect character stability without manual tweaking.
-
-### 🚀 Improvements
-* **Spine-Based Alignment (Left-Align)**:
-    * Replaced the complex offset logic with a pure "Spine Anchor" system.
-    * Characters are now anchored strictly to `x=0` (Left Edge) of their sprite.
-    * **Result**: Andrew Tate no longer "jitters" or jumps sideways when transitioning between `Idle` (narrow sprite) and `Smoke` (wide sprite).
-* **Code Cleanup**: Removed `TALK_OFFSET_X` and manual `OFFSETS` values from the configuration.
-
----
-
-## [v6.4] - The "Offset Engine" Update 📐
-**Granular Control Update.**
-
-### 🚀 New Features
-* **State-Specific Offsets**:
-    * Introduced the `OFFSETS` dictionary in the config.
-    * Allowed developers to manually shift `IDLE`, `TALK`, and `BLINK` states independently on the X-axis.
-
----
-
-## [v6.3] - The "Top G" Update 🕶️💨
-**Major Content & Physics Update.**
-Added Andrew Tate and implemented complex animation logic to support non-standard gestures (smoking).
-
-### 🚀 New Features
-* **New Character: ANDREW (TATE)**
-    * Integrated "Top G" persona: obsessed with The Matrix, Bugattis, and Sparkling Water.
-* **Cigar Physics Engine (`BLINK_LEN`)**:
-    * Logic: Tate takes a drag from his cigar for **15 frames** (vs standard 3).
-
----
-
-## [v6.1] - The "Smart Fix" Update 🧠
-**Rendering Core Overhaul.**
-
-### 🐛 Bug Fixes
-* **Fixed "Jumping Size" Glitch**: The engine now calculates `zoom_factor` based only on IDLE sprite dimensions.
-* **Fixed "Floating Feet"**: Replaced Center-Bottom alignment with Left-Bottom alignment.
-
----
-
-## [v6.0] - Stable Release 🛡️
-**Critical Rollback.**
-* Reverted to "Canvas Trust" logic: The engine now trusts that the input PNGs are correctly framed.
-
----
-
-## [v5.6] - The "Optimization" Update ⚡
-Added Solana integration and rendering speedups.
-
-### 🚀 New Features
-* **New Character: TOLY (Solana)**.
-* **Fast Mode Rendering**: Switched `moviepy` preset to `ultrafast` (12 FPS).
-
----
-
-## [v5.0] - The "Newsroom" Update 📰
-**AI Autonomy Milestone.**
-
-### 🚀 New Features
-* **Auto-Topic Generator**: First implementation of GPT-4o headlines.
-* **New Character: DON (Trump)**.

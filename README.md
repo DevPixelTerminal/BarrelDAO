@@ -1,4 +1,4 @@
-# 🛢️ BarrelDAO: Night Shift Terminal (v7.1)
+# 🛢️ BarrelDAO: Night Shift Terminal (v7.2)
 
 > **Status:** Autonomous | **Uptime:** 24/7 | **Vibe:** Adult Swim / Crypto Satire
 
@@ -17,6 +17,12 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 * **Visuals:** Dirty coat, fingerless gloves.
 
 ### ⭐️ The Guests (Rotation)
+
+#### 🧢 THREADGUY (The Degen Streamer)
+* **Archetype:** Unhinged Gambler / Hype Man.
+* **Personality:** Manic energy. Constantly screaming about "Life Changing Money" while staring at charts. Spams slang like "We are so back", "It is over", and "I am cooked".
+* **Visuals:** White hoodie with Twitch logo, messy hair.
+* **Color Theme:** Twitch Purple (`#6441a5`).
 
 #### 🦄 VITALIK (The Crypto Monk)
 * **Archetype:** The Alien Genius.
