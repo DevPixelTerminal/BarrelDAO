@@ -2,8 +2,31 @@
 
 All notable changes to the "Night Shift Terminal" engine will be documented in this file.
 
-> **Current Version:** v7.0
+> **Current Version:** v7.1
 > **Release Date:** 2026-01-11
+
+---
+
+## [v7.1] - The "Vitalik & Atmosphere" Update 🦄
+**Content & Immersion Upgrade.**
+Added the final main cast member and overhauled the weather physics for maximum realism.
+
+### 🎭 New Character: VITALIK
+* **Added `VITALIK` to the roster.**
+    * **Visuals:** Skinny sprite (`SCALE: 0.92`), unicorn t-shirt, grey sweatpants.
+    * **Persona:** "The Alien Genius". Speaks in complex technical riddles (Sharding, ZK-Rollups), ignores price talk, and focuses on "Public Goods".
+    * **Contrast:** Acts as a philosophical foil to the greed of Tate/Trump and the ego of Elon.
+
+### 🌧️ Weather Engine: "Smooth Gradient"
+* **Removed Block Weather:** Abandoned the binary "On/Off" weather switching.
+* **Implemented Gradient Logic:** Weather now changes mathematically over **15-episode cycles** (e.g., 0% -> 5% -> 10% ... -> 100%).
+* **Dynamic Particle Count:** The number of raindrops/snowflakes now scales linearly with intensity.
+    * *0.1 Intensity:* Light drizzle.
+    * *1.0 Intensity:* Heavy storm.
+* **Wet Ground Physics:** Puddles now dry slowly (fade out opacity) after the rain stops, adding a realistic "aftermath" phase.
+
+### 🐛 Core Fixes
+* **Language Enforcer:** Hardcoded "STRICTLY ENGLISH" directives into the System Prompt to prevent the LLM from hallucinating in Russian or other languages during "Creative Mode".
 
 ---
 
@@ -13,17 +36,17 @@ Shifted the engine from "News Aggregation" to "Satirical Chaos". The goal is to 
 
 ### 🧠 AI Core: "Chaos Mode"
 * **Replaced Topic Logic**: Removed static interest lists. The engine now generates unique, absurd, and satirical headlines (The Onion / Pump.fun style) for every episode.
-* **Adult Swim Tone**: Tuned OpenAI `temperature` to **1.3**. Characters now use slang (WAGMI, REKT, Copium), mild profanity, and aggressive roasting.
+* **Adult Swim Tone**: Tuned OpenAI `temperature` to **1.15**. Characters now use slang (WAGMI, REKT, Copium), mild profanity, and aggressive roasting.
 * **Deep Talk**: Increased dialogue length to **12-16 lines** for deeper, more philosophical (and delusional) debates.
 
 ### 🎨 Visual Engine: "Smart Bubbles"
 * **Boundary Injection**: Implemented a mathematical "Guard Rail" system for text bubbles.
-    * Logic: `if x < 10: x = 10`.
+    * Logic: `if x < 20: x = 20`.
     * **Result**: Text bubbles no longer clip off-screen, regardless of how long the text is or where the character stands.
-* **Stage Re-Balancing**: Moved all Guest characters significantly to the LEFT (`x=200-500` range) to improve composition and stop them from blocking the barrel.
+* **Stage Re-Balancing**: Moved all Guest characters significantly to the LEFT (`x=450-500` range) to improve composition and stop them from blocking the barrel.
 
 ### 🔊 Audio & System
-* **AAC Codec Enforcement**: Switched audio encoding to `aac` to fix silent video issues on Windows/OBS.
+* **AAC Codec Enforcement**: Switched audio encoding to `aac` via FFMPEG to fix silent video issues on Windows/OBS environments.
 * **Local Dev Optimization**: Adjusted rendering threads for stability on local Windows machines.
 
 ---
@@ -36,6 +59,7 @@ Achieved perfect character stability without manual tweaking.
 * **Spine-Based Alignment (Left-Align)**:
     * Replaced the complex offset logic with a pure "Spine Anchor" system.
     * Characters are now anchored strictly to `x=0` (Left Edge) of their sprite.
+    * **Result**: Andrew Tate no longer "jitters" or jumps sideways when transitioning between `Idle` (narrow sprite) and `Smoke` (wide sprite).
 * **Code Cleanup**: Removed `TALK_OFFSET_X` and manual `OFFSETS` values from the configuration.
 
 ---
@@ -72,16 +96,23 @@ Added Andrew Tate and implemented complex animation logic to support non-standar
 ---
 
 ## [v6.0] - Stable Release 🛡️
+**Critical Rollback.**
 * Reverted to "Canvas Trust" logic: The engine now trusts that the input PNGs are correctly framed.
 
 ---
 
 ## [v5.6] - The "Optimization" Update ⚡
+Added Solana integration and rendering speedups.
+
+### 🚀 New Features
 * **New Character: TOLY (Solana)**.
 * **Fast Mode Rendering**: Switched `moviepy` preset to `ultrafast` (12 FPS).
 
 ---
 
 ## [v5.0] - The "Newsroom" Update 📰
+**AI Autonomy Milestone.**
+
+### 🚀 New Features
 * **Auto-Topic Generator**: First implementation of GPT-4o headlines.
 * **New Character: DON (Trump)**.

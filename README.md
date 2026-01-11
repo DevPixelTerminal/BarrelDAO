@@ -1,4 +1,4 @@
-# 🛢️ BarrelDAO: Night Shift Terminal (v7.0)
+# 🛢️ BarrelDAO: Night Shift Terminal (v7.1)
 
 > **Status:** Autonomous | **Uptime:** 24/7 | **Vibe:** Adult Swim / Crypto Satire
 
@@ -18,10 +18,16 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 
 ### ⭐️ The Guests (Rotation)
 
+#### 🦄 VITALIK (The Crypto Monk)
+* **Archetype:** The Alien Genius.
+* **Personality:** Extremely humble but speaks in complex technical riddles about "Sharding", "Zero-Knowledge Proofs", and "Public Goods". Confused by the concept of greed and "Lambos".
+* **Visuals:** Skinny frame, unicorn t-shirt, grey sweatpants.
+* **Physics:** Custom scale (`0.92`) to emphasize his slender build.
+
 #### 🚀 ELON (The Meme King)
 * **Archetype:** Chaotic Neutral Billionaire.
-* **Personality:** Egocentric troll. Obsessed with Mars, Doge, and "saving humanity" (by charging $8 for it).
-* **AI Logic:** Generates topics about buying concepts (like Gravity) or interspecies alliances.
+* **Personality:** Egocentric troll. Obsessed with Mars, Doge, and "saving humanity" (usually by charging $8 for it).
+* **AI Logic:** Generates topics about buying abstract concepts (like Gravity) or interspecies alliances.
 
 #### 🦅 DON (The 47th)
 * **Archetype:** The Populist Titan.
@@ -46,14 +52,20 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 We abandoned standard news feeds for pure generative madness.
 * **Step 1 (Topic):** The engine asks GPT-4o to invent a **tabloid-style headline** based on the guest's vices (Ego, Greed, Delusion).
     * *Example:* "Elon admits he is actually 3 raccoons in a trench coat."
-* **Step 2 (Script):** A second AI call generates a 12-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium).
+* **Step 2 (Script):** A second AI call generates a 12-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium) and enforces **English-only** output.
 
-### 2. Smart Bubble Rendering
+### 2. Smooth Gradient Weather (v7.1)
+The environment creates a living atmosphere using `numpy` linear interpolation.
+* **Cycle:** Dry -> Rain starts (10%) -> Heavy Rain (100%) -> Drying Puddles -> Snow -> Melting.
+* **Physics:** Raindrop and snowflake counts are dynamically calculated based on the current intensity float value.
+* **Visuals:** Ground reflections (puddles) fade in and out smoothly over 15-episode cycles.
+
+### 3. Smart Bubble Rendering
 Text generation is unpredictable. To prevent UI glitches:
-* **Boundary Injection:** The render pipeline calculates text width in real-time and mathematically forces the text bubble inside the 1280x720 canvas (`x > 10` and `y > 10`).
+* **Boundary Injection:** The render pipeline calculates text width in real-time and mathematically forces the text bubble inside the 1280x720 canvas (`x > 20`).
 * **Dynamic Typing:** Uses a typewriter effect synchronized with 8-bit audio blips.
 
-### 3. Audio & Codec Pipeline
+### 4. Audio & Codec Pipeline
 * **Voice:** Procedural 8-bit beeping (Animal Crossing style), pitch-shifted per character.
 * **Encoding:** Forces `AAC` audio codec via FFMPEG to ensure compatibility with OBS and YouTube Live streams on Windows Server environments.
 
