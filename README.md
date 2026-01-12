@@ -1,54 +1,95 @@
 # 🛢️ BarrelDAO: Night Shift Terminal (v8.0)
 
-> **Status:** Autonomous | **Resolution:** 1080p Native | **Engine:** Smart Upscale
+![Status](https://img.shields.io/badge/Status-Autonomous-green) ![Resolution](https://img.shields.io/badge/Res-1080p_Native-blue) ![Engine](https://img.shields.io/badge/Engine-Smart_Upscale-purple)
 
-**BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **retro 32-bit aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
+**BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a never-ending late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **retro 32-bit aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
 
 ---
 
-## 🚀 Key Features (v8.0 Architecture)
+## 🏗️ Technical Architecture (v8.0)
 
-### 1. Smart Upscale Rendering
-To achieve blazing fast render speeds on local hardware (approx. 45s per episode) without losing pixel-art crispness:
-* The engine internally draws frames at **540p** to save CPU cycles.
-* It utilizes **FFMPEG's Nearest Neighbor** filter during the final export to upscale to **1080p**.
-* **Result:** Sharp, retro visuals with zero blur and high bitrate (10Mbps).
+The engine runs on a custom-built "Smart Upscale" pipeline designed for high-end local hardware.
+
+### 1. The Rendering Pipeline
+To achieve blazing fast render speeds (~45s per episode) without losing pixel-art crispness:
+* **Internal Draw:** The engine constructs scenes at **540p** to minimize CPU overhead per frame.
+* **FFMPEG Upscale:** Using the `neighbor` scaling flag, the final output is blown up to **1080p** during the encoding phase. This preserves the sharp, blocky "retro" look without blurring.
+* **Parallel Processing:** Utilizes **16 CPU threads** for simultaneous frame rendering and audio mixing.
 
 ### 2. The "Chaos" Satire Engine
-* **Step 1 (Topic):** The engine asks GPT-4o to invent a **tabloid-style headline** based on the guest's vices.
-* **Step 2 (Script):** A second AI call generates a 14-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium).
+* **Topic Generation:** The system prompts GPT-4o to invent a **tabloid-style headline** based on the current guest's specific vices (Ego, Greed, Delusion, hype).
+* **Scriptwriting:** A second AI call generates a 14-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium) and enforces character-specific speech patterns.
 
-### 3. Smooth Gradient Weather
-The environment creates a living atmosphere using `numpy` linear interpolation.
-* **Cycle:** Dry -> Rain -> Heavy Storm -> Drying Puddles -> Snow -> Melting.
-* **Physics:** Raindrop/snowflake counts are dynamically calculated based on intensity.
+### 3. Procedural Audio & Sync
+* **Voice Synthesis:** Characters speak in procedural 8-bit "beeps" (Animal Crossing style), pitch-shifted to match their persona (e.g., Elon is deeper, Vitalik is higher).
+* **Perfect Sync:** Audio clips are injected directly into video sub-clips to ensure lip-flap animation matches the sound duration perfectly, accounting for pauses and walking animations.
 
 ---
 
-## 🎭 The Cast
+## 🎭 The Cast & Archetypes
+
+The engine currently supports a robust roster of AI agents, each with unique visual behaviors and prompt-engineered personas.
 
 ### 🏠 The Host
-* **🔥 HOBO:** The Fallen Trader. Lives in a barrel. Roasts billionaires.
+#### 🔥 HOBO (The Based Oracle)
+* **Archetype:** The Fallen Trader / Diogenes of the Blockchain.
+* **Backstory:** Lost his life savings in the FTX crash. Now lives in a barrel. He is the only sane person in the room, roasting billionaires for their delusions.
+* **Visuals:** Dirty coat, beanie, fingerless gloves. Always stands near the fire.
 
-### ⭐️ The Guests
-* **🧢 THREADGUY:** The Degen Streamer. Screams about "Life Changing Money".
-* **🦄 VITALIK:** The Alien Genius. Speaks in tech riddles.
-* **🚀 ELON:** The Meme King. Obsessed with Mars and Doge.
-* **🦅 DON:** The Populist. Obsessed with walls and winning.
-* **⚡ TOLY:** The Solana Tech-Bro. "Network outage is a feature."
-* **🕶️ TATE:** The Matrix Breaker. Toxic Alpha energy.
+### ⭐️ The Guests (Rotation)
+
+#### 🚀 ELON (The Meme King)
+* **Archetype:** Chaotic Neutral Billionaire.
+* **Behavior:** Obsessed with Mars, Doge, and "saving humanity" (usually by charging $8 for it). Constantly tries to sell the Hobo on interplanetary pyramid schemes.
+* **Visuals:** Black t-shirt, jeans, smug expression.
+
+#### 🧢 THREADGUY (The Degen Streamer)
+* **Archetype:** Unhinged Gambler / Hype Man.
+* **Behavior:** Manic energy. Screams about "Life Changing Money" while staring at charts. Uses slang like "We are so back", "It is over", and "I am cooked".
+* **Visuals:** White hoodie with Twitch logo, messy "broccoli" hair.
+
+#### 🦄 VITALIK (The Crypto Monk)
+* **Archetype:** The Alien Genius.
+* **Behavior:** Humble but speaks in complex technical riddles about "Sharding" and "Zero-Knowledge Proofs". Confused by the concept of greed and "Lambos".
+* **Visuals:** Skinny frame (`Scale: 0.92`), unicorn t-shirt.
+
+#### 🦅 DON (The 47th)
+* **Archetype:** The Populist Titan.
+* **Behavior:** Loud, uses CAPSLOCK. Obsessed with gold, ratings, and "winning". Treats the alleyway like a campaign rally.
+* **Visuals:** Oversized suit, red tie, orange tint.
+
+#### ⚡ TOLY (The Optimizer)
+* **Archetype:** The Nervous Tech-Bro (Solana Founder).
+* **Behavior:** Denies network outages ("It's a feature"). Speaks in "TPS" and "Latency". Paradoxically anxious yet arrogant.
+* **Visuals:** Hacker hoodie, energy drink vibe.
+
+#### 🕶️ TATE (The Top G)
+* **Archetype:** The Matrix Breaker.
+* **Behavior:** Toxic Alpha. Smokes a cigar constantly. Calls the Hobo a "Brokie" for breathing free air.
+* **Physics:** Custom **15-frame** animation loop for cigar smoking.
 
 ---
 
-## 🛠 Hardware Requirements (v8.0)
+## 🌧️ Atmospheric Engine
 
-This version is optimized for high-end local PCs (PC Master Race Edition).
-* **CPU:** 10+ Cores recommended (e.g., i5-14600KF, i9, Ryzen 9).
-* **Threads:** Configured to use **16 threads** by default.
-* **RAM:** 16GB+ recommended for video buffer.
+The environment creates a living atmosphere using `numpy` linear interpolation.
+* **Weather Cycle:** Dry -> Light Drizzle -> Heavy Storm -> Drying Puddles -> Snow -> Melting.
+* **Physics:** Raindrop and snowflake counts are dynamically calculated based on the current `intensity` float value (0.0 to 1.0).
+* **Lighting:** The fire barrel provides a dynamic light source that reflects off the characters.
 
-To tweak settings, edit `run_infinity.py`:
-```python
-RENDER_FPS = 15          # Optimized for pixel art
-threads = 16             # Adjust based on your CPU
-bitrate = "10000k"       # 1080p High Quality
+---
+
+## 🛠 Hardware Requirements (PC Edition)
+
+This version is optimized for high-end local workstations.
+
+| Component | Recommendation | Reason |
+| :--- | :--- | :--- |
+| **CPU** | Core i5-14600KF / Ryzen 9 | Needs 12+ threads for fast encoding. |
+| **GPU** | RTX 4070 / 3080 | Handles display and OBS encoding. |
+| **RAM** | 32GB DDR5 | Required for caching uncompressed frames. |
+| **Storage** | NVMe SSD | Fast I/O for reading asset files. |
+
+---
+
+*Engineered by AlphaBits.*

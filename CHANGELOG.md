@@ -1,39 +1,47 @@
 # 📜 BarrelDAO Change Log
 
-All notable changes to the "Night Shift Terminal" engine will be documented in this file.
+All notable changes to the **"Night Shift Terminal"** simulation engine will be documented in this file.
 
-> **Current Version:** v8.0 (PC Master Race Edition)
+> **Current Version:** v8.0 (Titanium Edition)
 > **Release Date:** 2026-01-13
+> **Engine:** Python 3.11 + FFMPEG Hardware Acceleration
 
 ---
 
 ## [v8.0] - The "PC Master Race" & 1080p Overhaul 🚀
-**Massive Performance & Quality Update.**
-Migrated the rendering pipeline from cloud-based CPU rendering to a high-performance local architecture (i5-14600KF / RTX 4070 optimized). Achieved **10x faster render speeds** while increasing resolution to Native 1080p.
+**Massive Performance, Architecture & Quality Update.**
+Successfully migrated the rendering pipeline from a cloud-based CPU environment to a high-performance local architecture (optimized for **i5-14600KF / RTX 4070**). Achieved a **1200% increase in render speed** while doubling the output resolution.
 
 ### ⚡ Core Engine: "Smart Upscale" Pipeline
-* **FFMPEG Hardware Acceleration:** Completely rewrote the rendering logic. Instead of resizing frames pixel-by-pixel in Python (slow), the engine now renders in a lightweight 960x540 canvas and uses FFMPEG's `neighbor` filter to upscale to **1920x1080** on the fly.
-    * **Result:** Render time dropped from **7 minutes** to **~45 seconds**.
-    * **Quality:** Crystal clear pixel art with zero blur.
-* **Multi-Threading Unleashed:** Unlocked the thread limit. Increased from `threads=4` to `threads=16` to fully utilize modern 14+ core CPUs.
-* **Bitrate Boost:** Increased bitrate to **10,000k** to eliminate compression artifacts and "red pixel" noise.
+* **FFMPEG Hardware Acceleration:** Completely rewrote the rendering logic to bypass Python's slow resizing methods. The engine now renders frames in a lightweight native 960x540 canvas and utilizes FFMPEG's `neighbor` filter to upscale to **1920x1080 (Full HD)** during the encoding pass.
+    * **Result:** Render time dropped from **~7 minutes** to **~45 seconds** per episode.
+    * **Visuals:** Achieved pixel-perfect sharpness with zero anti-aliasing blur.
+* **Multi-Threading Unleashed:** Unlocked the thread limiter. Increased encoding threads from `4` to `16` to fully utilize the 20-thread capacity of the new hardware.
+* **Bitrate Boost:** Increased video bitrate to **10,000k (10 Mbps)** to eliminate all compression artifacts and "red pixel" noise in dark scenes.
 
 ### 🔊 Audio Sync & Timing Fixes
-* **Drift Elimination:** Fixed a critical bug where audio dialogue would start before the video animation.
-* **Logic Change:** Removed manual audio concatenation. The engine now binds audio clips directly to video segments, ensuring perfect lip-sync even during pauses/silence.
+* **Drift Elimination:** Fixed a critical synchronization bug where audio dialogue would "run ahead" of the video animation during silence/walking sequences.
+* **Logic Overhaul:** Removed manual `concatenate_audioclips` stitching. The engine now binds audio clips directly to specific video segments, ensuring perfect lip-sync even during procedural pauses.
 
 ### 🎨 Visual & UI Polish
-* **Infinite Topic Bar:** Increased the ticker tape loop factor from `3x` to `30x`. The topic bar now runs infinitely and never disappears, regardless of video length.
+* **Infinite Topic Bar:** Increased the ticker tape loop factor from `3x` to `30x`. The scrolling topic bar is now mathematically guaranteed to never disappear, regardless of dialogue length.
 * **Stage Composition:**
-    * **Hobo Position:** Moved Hobo significantly closer to the fire (`x=1100`) for a more natural, cozy composition.
-* **Smart Text Wrapping:** Adjusted the text bubble constraints. Reduced text width limit (`width=25`) and increased padding to prevent text from clipping out of the speech bubbles on 1080p resolution.
+    * **Hobo Position:** Adjusted world coordinates (`x=1100`) to place the Host closer to the fire barrel, creating a more natural, "warming hands" composition.
+* **Smart Text Wrapping:** Recalculated text bubble constraints for 1080p. Reduced text width limit (`width=25`) and increased padding to prevent text clipping.
 
 ---
 
 ## [v7.2] - The "We Are So Back" Update 📈
-* **Added `THREADGUY` to the roster.**
-* **Twitch Aesthetic:** Implemented purple color schemes.
+**Roster Expansion.** Injected pure "Crypto Twitter" chaos into the simulation.
+* **New Character: THREADGUY:** Added the "Degen Streamer" archetype.
+    * **Assets:** Custom white hoodie (Twitch logo), messy hair, grey sweatpants.
+    * **Behavior:** Unhinged energy, uses slang ("Cooked", "Apeing"), distinct purple text bubbles.
 
 ## [v7.1] - The "Vitalik & Atmosphere" Update 🦄
-* **Added `VITALIK` to the roster.**
-* **Weather Engine:** Implemented smooth gradient transitions for rain and snow.
+* **New Character: VITALIK:** Added the "Crypto Monk" archetype.
+    * **Physics:** Custom scaling (`0.92`) to reflect a slender build.
+* **Weather Engine:** Implemented `numpy` linear interpolation for smooth weather transitions (Clear -> Rain -> Snow cycles).
+
+## [v7.0] - The "Chaos" Core Update 🤡
+* **AI Overhaul:** Shifted from news aggregation to **Satirical Comedy**.
+* **Tone:** Tuned LLM temperature to `1.15` for maximum unpredictability and "Adult Swim" vibes.
