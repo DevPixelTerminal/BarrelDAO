@@ -1,95 +1,54 @@
-# 🛢️ BarrelDAO: Night Shift Terminal (v7.2)
+# 🛢️ BarrelDAO: Night Shift Terminal (v8.0)
 
-> **Status:** Autonomous | **Uptime:** 24/7 | **Vibe:** Adult Swim / Crypto Satire
+> **Status:** Autonomous | **Resolution:** 1080p Native | **Engine:** Smart Upscale
 
 **BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **retro 32-bit aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
 
 ---
 
-## 🎭 The Cast (Personality & Assets)
+## 🚀 Key Features (v8.0 Architecture)
 
-The engine currently supports a robust roster of AI agents, each with unique visual behaviors and prompt-engineered "Meme Lord" personas.
+### 1. Smart Upscale Rendering
+To achieve blazing fast render speeds on local hardware (approx. 45s per episode) without losing pixel-art crispness:
+* The engine internally draws frames at **540p** to save CPU cycles.
+* It utilizes **FFMPEG's Nearest Neighbor** filter during the final export to upscale to **1080p**.
+* **Result:** Sharp, retro visuals with zero blur and high bitrate (10Mbps).
 
-### 🏠 The Host (Resident)
-#### 🔥 HOBO (The Based Oracle)
-* **Archetype:** The Fallen Trader / Diogenes.
-* **Backstory:** Lost his life savings in the FTX crash. Now lives in a barrel. He is the only sane person in the room, roasting the billionaires for their delusions.
-* **Visuals:** Dirty coat, fingerless gloves.
+### 2. The "Chaos" Satire Engine
+* **Step 1 (Topic):** The engine asks GPT-4o to invent a **tabloid-style headline** based on the guest's vices.
+* **Step 2 (Script):** A second AI call generates a 14-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium).
 
-### ⭐️ The Guests (Rotation)
-
-#### 🧢 THREADGUY (The Degen Streamer)
-* **Archetype:** Unhinged Gambler / Hype Man.
-* **Personality:** Manic energy. Constantly screaming about "Life Changing Money" while staring at charts. Spams slang like "We are so back", "It is over", and "I am cooked".
-* **Visuals:** White hoodie with Twitch logo, messy hair.
-* **Color Theme:** Twitch Purple (`#6441a5`).
-
-#### 🦄 VITALIK (The Crypto Monk)
-* **Archetype:** The Alien Genius.
-* **Personality:** Extremely humble but speaks in complex technical riddles about "Sharding", "Zero-Knowledge Proofs", and "Public Goods". Confused by the concept of greed and "Lambos".
-* **Visuals:** Skinny frame, unicorn t-shirt, grey sweatpants.
-* **Physics:** Custom scale (`0.92`) to emphasize his slender build.
-
-#### 🚀 ELON (The Meme King)
-* **Archetype:** Chaotic Neutral Billionaire.
-* **Personality:** Egocentric troll. Obsessed with Mars, Doge, and "saving humanity" (usually by charging $8 for it).
-* **AI Logic:** Generates topics about buying abstract concepts (like Gravity) or interspecies alliances.
-
-#### 🦅 DON (The 47th)
-* **Archetype:** The Populist Titan.
-* **Personality:** Loud, uses CAPSLOCK. Obsessed with gold, ratings, and "winning". Thinks the Hobo is a "Low IQ individual".
-* **AI Logic:** Focuses on bizarre business deals, walls, and conspiracy theories.
-
-#### ⚡ TOLY (The Optimizer)
-* **Archetype:** The Nervous Tech-Bro.
-* **Personality:** Solana Founder. Denies network outages ("It's a feature"). Speaks in "TPS" and "Latency". Paradoxically anxious yet arrogant.
-* **Visuals:** Hoodie, energy drink vibes.
-
-#### 🕶️ TATE (The Top G)
-* **Archetype:** The Matrix Breaker.
-* **Personality:** Toxic Alpha. Smokes a cigar constantly. Calling the Hobo a "Brokie" for breathing free air.
-* **Physics:** Custom **15-frame** animation loop for cigar smoking.
-
----
-
-## ⚙️ Engine Mechanics (Under the Hood)
-
-### 1. The "Chaos" Satire Engine (v7.0)
-We abandoned standard news feeds for pure generative madness.
-* **Step 1 (Topic):** The engine asks GPT-4o to invent a **tabloid-style headline** based on the guest's vices (Ego, Greed, Delusion).
-    * *Example:* "Elon admits he is actually 3 raccoons in a trench coat."
-* **Step 2 (Script):** A second AI call generates a 12-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium) and enforces **English-only** output.
-
-### 2. Smooth Gradient Weather (v7.1)
+### 3. Smooth Gradient Weather
 The environment creates a living atmosphere using `numpy` linear interpolation.
-* **Cycle:** Dry -> Rain starts (10%) -> Heavy Rain (100%) -> Drying Puddles -> Snow -> Melting.
-* **Physics:** Raindrop and snowflake counts are dynamically calculated based on the current intensity float value.
-* **Visuals:** Ground reflections (puddles) fade in and out smoothly over 15-episode cycles.
-
-### 3. Smart Bubble Rendering
-Text generation is unpredictable. To prevent UI glitches:
-* **Boundary Injection:** The render pipeline calculates text width in real-time and mathematically forces the text bubble inside the 1280x720 canvas (`x > 20`).
-* **Dynamic Typing:** Uses a typewriter effect synchronized with 8-bit audio blips.
-
-### 4. Audio & Codec Pipeline
-* **Voice:** Procedural 8-bit beeping (Animal Crossing style), pitch-shifted per character.
-* **Encoding:** Forces `AAC` audio codec via FFMPEG to ensure compatibility with OBS and YouTube Live streams on Windows Server environments.
+* **Cycle:** Dry -> Rain -> Heavy Storm -> Drying Puddles -> Snow -> Melting.
+* **Physics:** Raindrop/snowflake counts are dynamically calculated based on intensity.
 
 ---
 
-## 🛠 Configuration Guide
+## 🎭 The Cast
 
-To tweak characters, edit the `ASSETS` dictionary in `run_infinity.py`.
+### 🏠 The Host
+* **🔥 HOBO:** The Fallen Trader. Lives in a barrel. Roasts billionaires.
 
+### ⭐️ The Guests
+* **🧢 THREADGUY:** The Degen Streamer. Screams about "Life Changing Money".
+* **🦄 VITALIK:** The Alien Genius. Speaks in tech riddles.
+* **🚀 ELON:** The Meme King. Obsessed with Mars and Doge.
+* **🦅 DON:** The Populist. Obsessed with walls and winning.
+* **⚡ TOLY:** The Solana Tech-Bro. "Network outage is a feature."
+* **🕶️ TATE:** The Matrix Breaker. Toxic Alpha energy.
+
+---
+
+## 🛠 Hardware Requirements (v8.0)
+
+This version is optimized for high-end local PCs (PC Master Race Edition).
+* **CPU:** 10+ Cores recommended (e.g., i5-14600KF, i9, Ryzen 9).
+* **Threads:** Configured to use **16 threads** by default.
+* **RAM:** 16GB+ recommended for video buffer.
+
+To tweak settings, edit `run_infinity.py`:
 ```python
-"CHAR_NAME": {
-    "SCALE": 1.0,          # Size multiplier
-    "SPOT_X": 500,         # Horizontal Position (Left <-> Right)
-    "OFFSET_Y": 0,         # Vertical shift
-    
-    # AI Persona Injection
-    "WHO_IS_HE": "Description of the character's psyche...",
-    
-    # Physics
-    "BLINK_LEN": 3         # 3 for blink, 15 for smoking/drinking
-}
+RENDER_FPS = 15          # Optimized for pixel art
+threads = 16             # Adjust based on your CPU
+bitrate = "10000k"       # 1080p High Quality
