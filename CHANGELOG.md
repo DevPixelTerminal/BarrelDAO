@@ -2,9 +2,27 @@
 
 All notable changes to the **"Night Shift Terminal"** simulation engine will be documented in this file.
 
-> **Current Version:** v8.0 (Titanium Edition)
-> **Release Date:** 2026-01-13
-> **Engine:** Python 3.11 + FFMPEG Hardware Acceleration
+> **Current Version:** v8.5 (God Tier Update)
+> **Release Date:** 2026-01-17
+> **Engine:** Python 3.12 + OpenAI GPT-4o + FFMPEG High-Profile
+
+---
+
+## [v8.5] - The "King of Retail" & High-Fidelity Asset Update 👑
+**Major Content Expansion & Asset Pipeline Upgrade.**
+This update introduces the most complex character model to date and refines the asset loading pipeline to support high-resolution PNG transparency, enabling a new tier of visual quality.
+
+### 🆕 New Character: ANSEM (@blknoiz06)
+* **Archetype Integration:** Added "The King of Retail" to the guest rotation.
+* **High-Fidelity Sprites:** Implemented a new, high-detail pixel art style (Stardew Valley / Eastward aesthetic) specifically for this character.
+    * **Visual Details:** Accurate representation of the "fade" haircut, glasses, beard, and signature streetwear (Bitcoin hoodie).
+    * **Unique Animation:** Added a custom "Phone Check" idle state where the character is constantly engaged with the market.
+* **Personality Engine:** Tuned the GPT-4o prompt to reflect his specific Twitter persona ("God Tier calls", "Solana maximalism", "Smug confidence").
+
+### 🛠️ Engine & Asset Improvements
+* **PNG Alpha Channel Support:** Upgraded the `load_trimmed()` function to correctly handle high-bit-depth PNG files with complex transparency layers. This solves issues with "halo" artifacts around detailed sprites.
+* **Asset Mix-and-Match:** The engine now seamlessly handles a mix of legacy `.jpg` assets and new high-quality `.png` assets within the same scene.
+* **Dialogue Tuning:** Adjusted the "Slang Filter" to include newer market terminology ("Liquidity", "Thesis", "Send it").
 
 ---
 
@@ -41,7 +59,3 @@ Successfully migrated the rendering pipeline from a cloud-based CPU environment 
 * **New Character: VITALIK:** Added the "Crypto Monk" archetype.
     * **Physics:** Custom scaling (`0.92`) to reflect a slender build.
 * **Weather Engine:** Implemented `numpy` linear interpolation for smooth weather transitions (Clear -> Rain -> Snow cycles).
-
-## [v7.0] - The "Chaos" Core Update 🤡
-* **AI Overhaul:** Shifted from news aggregation to **Satirical Comedy**.
-* **Tone:** Tuned LLM temperature to `1.15` for maximum unpredictability and "Adult Swim" vibes.

@@ -1,19 +1,19 @@
-# 🛢️ BarrelDAO: Night Shift Terminal (v8.0)
+# 🛢️ BarrelDAO: Night Shift Terminal (v8.5)
 
-![Status](https://img.shields.io/badge/Status-Autonomous-green) ![Resolution](https://img.shields.io/badge/Res-1080p_Native-blue) ![Engine](https://img.shields.io/badge/Engine-Smart_Upscale-purple)
+![Status](https://img.shields.io/badge/Status-Autonomous-green) ![Resolution](https://img.shields.io/badge/Res-1080p_Native-blue) ![Engine](https://img.shields.io/badge/Engine-Smart_Upscale-purple) ![Assets](https://img.shields.io/badge/Assets-High_Fidelity-orange)
 
-**BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a never-ending late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **retro 32-bit aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
+**BarrelDAO** is a fully autonomous, generative pixel-art sitcom engine. It simulates a never-ending late-night talk show in a dirty alleyway, hosted by a crypto-homeless sage. The engine combines **LLM-driven improv comedy** with **high-fidelity retro aesthetics** to create endless content about the absurdity of modern economics, tech, and politics.
 
 ---
 
-## 🏗️ Technical Architecture (v8.0)
+## 🏗️ Technical Architecture (v8.5)
 
-The engine runs on a custom-built "Smart Upscale" pipeline designed for high-end local hardware.
+The engine runs on a custom-built "Smart Upscale" pipeline designed for high-end local hardware, now supporting mixed-format high-resolution assets.
 
 ### 1. The Rendering Pipeline
-To achieve blazing fast render speeds (~45s per episode) without losing pixel-art crispness:
-* **Internal Draw:** The engine constructs scenes at **540p** to minimize CPU overhead per frame.
-* **FFMPEG Upscale:** Using the `neighbor` scaling flag, the final output is blown up to **1080p** during the encoding phase. This preserves the sharp, blocky "retro" look without blurring.
+To achieve blazing fast render speeds (~40s per episode) without losing pixel-art crispness:
+* **Internal Draw:** The engine constructs scenes at **960x540** to minimize CPU overhead per frame.
+* **FFMPEG Smart Upscale:** Using the `neighbor` scaling flag, the final output is blown up to **1080p** during the encoding phase. This preserves the sharp, blocky "retro" look without blurring.
 * **Parallel Processing:** Utilizes **16 CPU threads** for simultaneous frame rendering and audio mixing.
 
 ### 2. The "Chaos" Satire Engine
@@ -21,7 +21,7 @@ To achieve blazing fast render speeds (~45s per episode) without losing pixel-ar
 * **Scriptwriting:** A second AI call generates a 14-16 line script using strict "Internet Slang" parameters (WAGMI, REKT, Copium) and enforces character-specific speech patterns.
 
 ### 3. Procedural Audio & Sync
-* **Voice Synthesis:** Characters speak in procedural 8-bit "beeps" (Animal Crossing style), pitch-shifted to match their persona (e.g., Elon is deeper, Vitalik is higher).
+* **Voice Synthesis:** Characters speak in procedural 8-bit "beeps" (Animal Crossing style), pitch-shifted to match their persona.
 * **Perfect Sync:** Audio clips are injected directly into video sub-clips to ensure lip-flap animation matches the sound duration perfectly, accounting for pauses and walking animations.
 
 ---
@@ -38,6 +38,12 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 
 ### ⭐️ The Guests (Rotation)
 
+#### 👑 ANSEM (The King of Retail) **[NEW]**
+* **Archetype:** The God-Tier Trader / Leader of the Pack.
+* **Behavior:** Smug, incredibly wealthy, and permanently attached to his phone. Treats the market like a video game. Obsessed with Solana, WIF, and "sending it".
+* **Visuals:** High-fidelity sprite. Fade haircut, glasses, Bitcoin hoodie, holding a smartphone with a glowing screen.
+* **Speech Style:** Confident, short bursts, uses terms like "Liquidity", "Rotation", "Thesis".
+
 #### 🚀 ELON (The Meme King)
 * **Archetype:** Chaotic Neutral Billionaire.
 * **Behavior:** Obsessed with Mars, Doge, and "saving humanity" (usually by charging $8 for it). Constantly tries to sell the Hobo on interplanetary pyramid schemes.
@@ -51,7 +57,7 @@ The engine currently supports a robust roster of AI agents, each with unique vis
 #### 🦄 VITALIK (The Crypto Monk)
 * **Archetype:** The Alien Genius.
 * **Behavior:** Humble but speaks in complex technical riddles about "Sharding" and "Zero-Knowledge Proofs". Confused by the concept of greed and "Lambos".
-* **Visuals:** Skinny frame (`Scale: 0.92`), unicorn t-shirt.
+* **Visuals:** Skinny frame (`Scale: 0.92`), unicorn t-shirt, lanyard.
 
 #### 🦅 DON (The 47th)
 * **Archetype:** The Populist Titan.
